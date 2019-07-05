@@ -1,0 +1,113 @@
+\documentclass[ngerman, 10pt, DIV=20, headings=small]{scrartcl}
+
+
+\usepackage{babel, lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}%oder was immer 
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+
+\usepackage{tikz}
+\usepackage[latin1]{inputenc}
+\usetikzlibrary{shapes,arrows}
+
+\pagenumbering{arabic}
+
+\begin{document}
+
+\chead{Jakob Otto --- Zusammenfassung Kap. 7: Kombinatorik --- Stand: \today}
+
+
+%\small %oder \tiny oder \scriptsize oder \footnotesize oder \small ...
+	\section*{Definitionen}
+	\textbf{1. Permutation:} Eine Anordnung aller Elemente einer endlichen Menge heißt Permutation.\\
+	\textbf{Ausführlicher:} Eine bijektive Abbildung einer endlichen Menge $M$ auf sich selbst nennt man Permutation der Menge.\\
+	Es gibt also $|M|!$ Permutationen von $M$.\\
+	Die Menge aller Permutationen der Menge $\{1,\dots,n\}$ bezeichnen eir mit $S_n$. Es gilt somit $|S_n| = n!$.
+	
+	\textbf{2. $k$-Permutation:} Eine $k$-Permutation einer endlichen Menge $S$ ist eine Permutation einer $k$-elementigen Teilmenge von $S$.\\
+	Die Anzahl aller $k$-Permutationen einer $n$-elementigen Menge wird mit $[\frac{n}{k}]$ bezeichnet. (auch: $(n)_k$)\\
+	Die Anzahl der $k$-elementigen Teilmenge einer $n$-elementigen Menge wird mit $(\frac{n}{k})$ bezeichnet. Dies ist der Binomialkoeffizient gesprochen \glqq $n$ über $k$\grqq\\
+	$(\frac{n}{k})$ kann auch als $\frac{n!}{k! \cdot (n - k)}$ dargestellt werden.\\
+	\textbf{Beispiel:}\\
+	Sei $S = \{1,2,3\}$ \\
+	Die 2-Permutation von $S$ ist also:\\
+	$(1,2), (2,1), (1,3), (3,1), (2,3), (3,2)$\\
+	Der Binomialkoeffizient hier ist: $(\frac{n}{k}) = (\frac{3}{2}) = 3$
+	
+	\textbf{3. Begriffserklärungen Wahrscheinlichkeitstheorie:}
+	\begin{itemize}
+		\item Der Ereignisraum $\Omega := \{\omega_1,\omega_2,\dots,\omega_n\}$. Hier: endlich und diskret.
+		\item Die Menge der Ereignisse $\mathcal{A} = \mathcal{P}(\Omega)$, also die Potenzmenge von $\Omega$.
+		\item Das Wahrscheinlichkeitsmaß $P : \mathcal{P}(\Omega) \rightarrow \mathbb{R}$ ordnet jedem Ereignis $A \in \mathcal{P}(\Omega)$ seine Wahrscheinlichkeit $P(A)$ zu.
+		\item Ein Laplace-Versuch ist ein Zufallsversuch mit endlich vielen und gleich wahrscheinlichen Ergebnissen. Beispiel: Münzwurf, Würfel
+		\item Bei Laplace-Versuchen wird das Wahrscheinlichkeitsmaß durch eine Abzählregel definiert (Ereignis $A \in \mathcal{P}(\Omega)$):
+		\begin{center}
+			$P(A) = \frac{|A|}{|\Omega|}$
+		\end{center}
+		Also: P(A) ist das Verhältnis von der Anzahl der (für $A$) günstigen Fälle und der Anzahl aller insgesamt möglichen Fälle.
+		\item Man benötigt kombinatorische Prinzipien, um |A| zu bestimmen.
+	\end{itemize}
+
+	\textbf{Pascal'sche Gleichung:} $(\frac{n}{k}) = (\frac{n-1}{k-1})+(\frac{n-1}{k})$
+	
+%	\section*{Zusammenfassung}
+%	Um die Anzahl von Kombinationen von endlichen, verschiedenen Objekten zu berechnen, wird die Kombinatorik gebraucht. Dies wir z.B. in der \glqq Diskreten Wahrscheinlichkeitstheorie\grqq gebraucht.
+	
+	% Define block styles
+	\tikzstyle{decision} = [diamond, draw, fill=blue!20,
+	text width=4.5em, text centered, node distance=2.5cm, inner sep=0pt]
+	\tikzstyle{block} = [rectangle, draw, fill=blue!20,
+	text width=5em, text centered, rounded corners, minimum height=4em]
+	\tikzstyle{line} = [draw, very thick, color=black!50, -latex']
+	\tikzstyle{cloud} = [draw, ellipse,fill=red!20, node distance=2.5cm,
+	minimum height=2em]
+	
+	
+	\begin{tikzpicture}[node distance = 2cm, auto]
+
+		% Place nodes
+		\node [decision] (auswahl) {Auswahl?};
+		\node [decision, below of=auswahl, left of=auswahl, xshift=-2cm] (wiederholung1) {Wdh?};
+		\node [block, below of=wiederholung1, left of=wiederholung1] (blck1) {n!};
+		\node [block, below of=wiederholung1, right of=wiederholung1] (blck2) {$\frac{k!}{m_1!\cdot m_2! \dots m_n!}$};
+		
+		\node [decision, right of=auswahl, below of=auswahl, xshift=2cm] (reihenfolge2) {Reihenfolge?};
+		\node [decision, below of=reihenfolge2, left of=reihenfolge2, xshift=-0.7cm] (wdh2) {Wdh?};
+		\node [block, below of=wdh2, left of=wdh2] (blck3) {$n^k$};
+		\node [block, below of=wdh2, right of=wdh2] (blck4) {$\frac{n!}{(n-k)!}$};
+		
+		\node [decision, below of=reihenfolge2, right of=reihenfolge2, xshift=1cm] (wdh3) {Wdh?};
+		\node [block, below of=wdh3, left of=wdh3] (blck5) {$\binom{n+k-1}{k}$};
+		\node [block, below of=wdh3, right of=wdh3] (blck6) {$\binom{n}{k}$};
+		
+		
+		
+		% lines
+		\path [line] (auswahl) -| (wiederholung1) node[draw=none, pos=0.1, left=4pt, label=NEIN]{};
+		\path [line] (auswahl) -| (reihenfolge2) node[draw=none, pos=0.3, left=4pt, label=JA]{};
+		
+		\path [line] (wiederholung1) -| (blck1) node[draw=none, pos=0.1, left=4pt, label=NEIN]{};
+		\path [line] (wiederholung1) -| (blck2) node[draw=none, pos=0.3, left=4pt, label=JA]{};
+		
+		\path [line] (reihenfolge2) -| (wdh2) node[draw=none, pos=0.1, left=4pt, label=JA]{};
+		\path [line] (reihenfolge2) -| (wdh3) node[draw=none, pos=0.3, left=4pt, label=NEIN]{};
+		
+		\path [line] (wdh2) -| (blck3) node[draw=none, pos=0.1, left=4pt, label=JA]{};
+		\path [line] (wdh2) -| (blck4) node[draw=none, pos=0.3, left=4pt, label=NEIN]{};
+		
+		\path [line] (wdh3) -| (blck5) node[draw=none, pos=0.1, left=4pt, label=JA]{};
+		\path [line] (wdh3) -| (blck6) node[draw=none, pos=0.3, left=4pt, label=NEIN]{};
+	
+	
+	\end{tikzpicture}
+	
+	
+	
+	
+\end{document}

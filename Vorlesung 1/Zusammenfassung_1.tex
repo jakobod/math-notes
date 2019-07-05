@@ -1,0 +1,229 @@
+\documentclass[ngerman, 10pt, twocolumn, DIV=20, headings=small]{scrartcl}
+
+
+\usepackage{babel, lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}%oder was immer 
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{caption}
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+
+\pagenumbering{arabic}
+
+\begin{document}
+
+\chead{Jakob Otto --- Zusammenfassung Kap. 1: Aussagen --- Stand: \today}
+
+
+%\footnotesize %oder \tiny oder \scriptsize oder \footnotesize oder \small ...
+	\section*{Definitionen}
+		\vspace{-0.3cm}
+
+		\textbf{1. Aussage:} Eine \textbf{Aussage} ist ein Satz, der entweder wahr (\textit{w}) oder falsch (\textit{f}) ist, also nie beides zugleich.
+		
+		\textbf{2. Konjunktion:} Seien A und B Aussagen. Dann ist auch "'A \textbf{und} B"' eine Aussage, die sogenannte \textbf{(logische) Konjunktion}.
+		 Kurz: (A $\wedge$ B). \\
+		 (A $\wedge$ B) ist genau dann wahr, wenn sowohl A als auch B wahr ist.
+		
+		\textbf{3. Disjunktion:} Seien A und B Aussagen. Dann ist auch "'A \textbf{oder} B"' eine Aussage, die sogenannte \textbf{(logische) Disjunktion}. 
+		Kurz: (A $\vee$ B).\\
+		(A $\vee$ B) ist genau dann wahr, wenn A oder B wahr ist --- oder beide.
+		
+		\textbf{4. Negation:} Sei A eine Aussage. Dann ist auch "'nicht  A"' eine Aussage, die \textbf{(logische) Negation}.
+		Kurz: ($\neg$A).
+		Die Aussage ($\neg$A) ist genau dann wahr, wenn A falsch ist.
+		
+		\textbf{5. Implikation:} Seien A und B aussagen. Dann ist auch "'wenn A, dann B"' eine Aussage, die \textbf{(logische) Implikation}. Kurz: (A $\Rightarrow$ B). 
+		Die Aussage (A $\Rightarrow$ B) ist genau dann falsch, wenn A wahr und B falsch ist.
+		
+		\textbf{6. Bi-Implikation:} Seien A und B Aussagen. Dann ist auch "'A \textbf{genau dann, wenn} B"' eine Aussage, die \textbf{Bi-Implikation}. Kurz: (A $\iff$ B). Die Aussage (A $\iff$ B) ist genau dann wahr, wenn A und B beide den gleichen Wahrheitswert haben.
+		
+		\textbf{7. Formel:} Eien aussagenlogische Verknüpfungvon Aussagenvariablen (durch endlich viele Junktoren) heißt \textbf{(aussagenlogische) Formel}. Aussagenvariablen werden auch als \textbf{atomare Formeln} bezeichnet.
+	
+		\textbf{8. Auswertung $A_{B}(x)$:} Sei B : Var $\to$ \textit{\{w,f\}} eine Belegung. Die Auswertung $A_{B}(F)$ ergibt sich \textbf{rekursiv}; das Rekursionsende sind die Variablen:
+		%%%	HIER MUSS NOCH DIE GLEICHUNG NACHGEFÜLLT WERDEN! FOLIE 26 lect-ho-mit.PDF	%%%
+		
+		\textbf{9. Tautologie:} Eine \textbf{Tautologie} ist eine Formel, die stets wahr is, in deren Wahrheitswerteverlauf also ausschließlich den Wahrheitswert \textit{w} vorkommt.
+		
+		\textbf{10. Kontradiktion:} Eine \textbf{Kontradiktion} ist eine Formel, die stets falsch ist, in deren Wahrheitswerteverlauf also ausschließlich der Wahrheitswert \textit{f} vorkommt.
+		
+		\textbf{11. Erfüllbarkeit:} Eine Formel \textit{F} heißt \textbf{erfüllbar}, wenn es mindestens eine Belegung der Aussagenvariablen gibt, die \textit{F} wahr macht.
+		
+		\textbf{12. Äquivalenz:} Zwei Formeln F und G heißen \textbf{(logisch) äquivalent} genau dann, wenn die Formel (F $\iff$ G) eine Tautologie ist. Dies wird durch \textbf{F $\equiv$ G} dargestellt.
+		
+		\textbf{13. Folgerungsbeziehung:} Die Formel \textbf{\textit{F} imliziert die Formel \textit{G}} genau dann, wenn (F $\Rightarrow$ G) eine Tautologie ist.\\
+		Dies wird durch F |= G dargestellt. ("'Aus \textit{F} folgt \textit{G}."')
+		
+		\textbf{14. Aussageform:} Eine \textbf{Aussageform} über den Universen \\$U_{1}$, $\dots$, $U_{n}$ ist ein Satz mit	den freien Variablen $x_{1}$, $\dots$, $x_{n}$.
+	
+		\textbf{15. Quantoren:} Sei \textit{p(x)} eine Aussageform über dem Universum U.
+		$\exists$ x : \textit{p(x)} ist wahr genau dann, wenn ein \textit{u} in \textit{U} existiert, so dass	\textit{p(u)} wahr ist. \\
+		$\forall$ : \textit{p(x)} ist wahr genau dann, wenn \textit{p(u)} für jedes \textit{u} aus \textit{U} wahr ist.
+		
+		\textbf{16. gebundene Variablen:} Eine Variable \textit{x} wird in einer Formel \textit{F} = $\forall$\textit{x} : \textit{G} durch den Allquantor \textbf{gebunden}.\\
+		Analog wird \textit{x} in \textit{F} = $\exists$\textit{x} : \textit{G} durch den Existenzquantor \textbf{gebunden}.
+		
+		\textbf{17. Normalisierte Darstellung:} Eine Formel ist in normalisierter Variablenschreibweise, wenn gilt:\\
+		\vspace{-0.40cm}
+		\begin{itemize}
+			\itemsep -1.4em
+			\item Keine Variable kommt sowohl frei als auch gebunden vor.\\
+			\item Keine Variable ist mehrfach gebunden. 
+		\end{itemize}
+
+
+		\vspace{-0.65cm}
+	
+		
+	\subsection*{Wahrheitstabellen}
+	\begin{tabular}{llll}
+		\begin{tabular}{ | c | c | c | }
+			\hline
+			\textbf{A} & \textbf{B} & \textbf{(A $\wedge$ B)} \\ \hline
+			w & w & w \\ \hline
+			w & f & f \\ \hline
+			f & w & f \\ \hline
+			f & f & f \\ \hline
+		\end{tabular}
+		&
+		\begin{tabular}{ | c | c | c | }
+			\hline
+			\textbf{A} & \textbf{B} & \textbf{(A $\vee$ B)} \\ \hline
+			w & w & w \\ \hline
+			w & f & w \\ \hline
+			f & w & w \\ \hline
+			f & f & f \\ \hline
+		\end{tabular}
+		&
+		\begin{tabular}{ | c | c | }
+			\hline
+			\textbf{A} & \textbf{$\neg$A} \\ \hline
+			w & f \\ \hline
+			f & w \\ \hline
+		\end{tabular}
+	\end{tabular}
+	\vspace{2cm}
+	\begin{tabular}{ll}
+		\begin{tabular}{ | c | c | c | }
+			\hline
+			\textbf{A} & \textbf{B} & \textbf{(A $\Rightarrow$ B)} \\ \hline
+			w & w & w \\ \hline
+			w & f & f \\ \hline
+			f & w & w \\ \hline
+			f & f & w \\ \hline
+		\end{tabular}
+		&
+		\begin{tabular}{ | c | c | c | }
+			\hline
+			\textbf{A} & \textbf{B} & \textbf{(A $\iff$ B)} \\ \hline
+			w & w & w \\ \hline
+			w & f & f \\ \hline
+			f & w & f \\ \hline
+			f & f & w \\ \hline
+		\end{tabular}
+	\end{tabular}	
+		
+	\vspace{-2.2cm}
+	
+	\section*{Umformungsregeln}
+	
+	\begin{equation}
+		\textbf{Kommutativgesetz: }
+		\begin{aligned}
+			(p \wedge q) \equiv (q \wedge p) \\
+			(p \vee q) \equiv (q \vee p) \notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Assoziativgesetz: }
+		\begin{aligned}
+			(p \wedge (q \wedge r)) \equiv ((p \wedge q) \wedge r) \\
+			(p \vee (q \vee r)) \equiv ((p \vee q) \vee r) \notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Distributivgesetz: }
+		\begin{aligned}
+			(p \wedge (q \vee r)) \equiv ((p \wedge q) \vee (p \wedge r)) \\	(p \vee (q \wedge r)) \equiv ((p \vee q) \wedge (p \vee r)) \notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Idempotenzgesetz: }
+		\begin{aligned}
+			(p \wedge p) \equiv p \\
+			(p \vee p) \equiv p \notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Doppelnegation: }
+		\begin{aligned}
+			\neg(\neg p) \equiv p \notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{de Morgan Gesetz: }
+		\begin{aligned}
+			\neg(p \wedge q) \equiv ((\neg p)\vee (\neg q)) \\ 
+			\neg(p \vee q) \equiv ((\neg p)\wedge (\neg q)) \notag
+		\end{aligned}
+	\end{equation}	
+	
+	\begin{equation}
+	\textbf{Tautologieregeln: }
+		\begin{aligned}
+			(p \wedge q) \equiv p \\ 
+			(p \vee q) \equiv q \\(q = Tautologie) \notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Kontradiktionsregeln: }
+		\begin{aligned}
+			(p \wedge q) \equiv q \\ 
+			(p \vee q) \equiv p \\(q = Kontradiktion) \notag
+		\end{aligned}
+	\end{equation}
+	
+	\subsection*{Umformungsregeln für Quantoren:}
+	
+	\begin{equation}
+	\textbf{Negationsregeln: }
+		\begin{aligned}
+			\neg \forall \textit{x} : \textit{p(x)} \equiv \exists \textit{x} : (\neg \textit{p(x)})\\
+			\neg \exists \textit{x} : \textit{p(x)} \equiv \forall \textit{x} : (\neg \textit{p(x)})	
+		\notag
+		\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Ausklammerregeln: }
+	\begin{aligned}
+	(\forall \textit{x} : \textit{p(x)} \wedge \forall \textit{y} : \textit{q(y)}) \equiv \forall \textit{z} : (\textit{p(z)} \wedge \textit{q(z)})\\
+	(\exists \textit{x} : \textit{p(x)} \vee \exists \textit{y} : \textit{q(y)}) \equiv \exists \textit{z} : (\textit{p(z)} \vee \textit{q(z)})
+	\notag
+	\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\textbf{Vertauschungsregeln: }
+	\begin{aligned}
+	\forall \textit{x} \forall \textit{y} : \textit{p(x,y)} \equiv \forall \textit{y} \forall \textit{x} : \textit{p(x,y)}\\
+	\exists \textit{x} \exists \textit{y} : \textit{p(x,y)} \equiv \exists \textit{y} \exists \textit{x} : \textit{p(x,y)}
+	\notag
+	\end{aligned}
+	\end{equation}
+	
+
+
+
+
+\end{document}
