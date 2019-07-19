@@ -1,0 +1,132 @@
+\section*{Definitionen}
+\vspace{-0.3cm}
+\textbf{1. Term:} Ein Term setzt sich zusammen aus:
+\begin{itemize}
+  \setlength\itemsep{-0.05cm}
+  \item Konstanten: $e, \pi$, usw.
+  \item Variablen: x, y, usw.
+  \item Operatoren: +, -, $\cdot, \sqrt{}$, usw. 
+  \item Funktionen: f(x), sin(x), usw.
+\end{itemize}
+  
+\textbf{Gleichung:} Eine Gleichung $t_1 = t_2$ setzt zwei Terme in Beziehung.
+
+\textbf{Grad (von Fkt.):} Ein reellwertiges Polynom ist ein Ausdruck der Form ($x \in \mathbb{R}$):\\
+$p(x) = a_nx^n + a_{n-1}x^{n-1} + \dots + a_nx^n + a_1x^1 + a_0$\\
+Falls $a_n \neq 0$, dann ist $n$ der Grad des Polynoms.
+
+\textbf{Logarithmus:} $log_a(c) = x$ f�r $a^x = c$
+
+\section*{Br�che}
+  \begin{equation}
+  \textbf{Addition bei gleichem Nenner:}
+  \begin{aligned}
+  \frac{a}{d} + \frac{b}{d} = \frac{a + b}{d}\notag
+  \end{aligned}
+  \end{equation}
+  
+  \begin{equation}
+  \textbf{Multiplikation:}
+  \begin{aligned}
+  \frac{a}{c} + \frac{b}{d} = \frac{ab}{cd}\notag
+  \end{aligned}
+  \end{equation}
+  
+  \begin{equation}
+  \textbf{K�rzen eines gleichen Faktors:}
+  \begin{aligned}
+  \frac{a \cdot c}{d \cdot c} = \frac{a}{d} \cdot \frac{c}{c} = \frac{a}{d} \cdot 1 = \frac{a}{d}\notag
+  \end{aligned}
+  \end{equation}
+  
+  \begin{equation}
+  \textbf{Erweitern um c:}
+  \begin{aligned}
+  \frac{a}{d} = \frac{a}{d} \cdot 1 = \frac{a}{d} \cdot \frac{c}{c} = \frac{a \cdot c}{d \cdot c}\notag
+  \end{aligned}
+  \end{equation}
+  
+  \textbf{Addieren mit verschiedenen Nennern (durch erweitern):}\\
+  \begin{equation}
+  \begin{aligned}
+  \frac{a}{c} + \frac{b}{d} = (\frac{a}{c} \cdot \frac{d}{d}) + (\frac{b}{d} \cdot \frac{c}{c}) = \frac{ad + bc}{cd}\notag
+  \end{aligned}
+  \end{equation}
+  
+\section*{Summen-/Produktnotation}
+\textbf{Summennotation:}\\
+$\sum_{i=1}^{n}a_i := a_1 + a_2 + \dots + a_n$ ist �quivalent zu $\sum_{1\leq i\leq n}^{}a_i$\\
+\textbf{Produktnotation:}\\
+$\prod_{i=1}^{n}a_i := a_1 \cdot a_2 \cdot \dots \cdot a_n$
+
+\section{Exponential-Gesetze}
+Sei $m,n \in \mathbb{N}$\\
+\begin{itemize}
+  \item $b^{-n} = \frac{1}{b^n}$
+  \item $b^m \cdot b^n = b^{m+n}$
+  \item $\frac{b^m}{b^n} = b^{m-n}$
+  \item $(b^m)^n = b^{m\cdot n}$
+  \item $b^m \cdot c^m = (b\cdot c)^m$
+  \item $\frac{b^m}{c^m} = (\frac{b}{c})^m$
+  \item $\sqrt[n]{x^m} = x^\frac{m}{n}$
+  \item $x^{-\frac{m}{n}} = \frac{1}{\sqrt[n]{x^m}}$
+\end{itemize}
+
+\section*{Binomische Formeln}
+\begin{itemize}
+  \item $(a + b)^2 = a^2 + 2ab + b^2$
+  \item $(a - b)^2 = a^2 - 2ab + b^2$
+  \item $(a - b) \cdot (a + b) = a^2 - b^2$
+\end{itemize}		
+
+\section*{Logarithmen}
+\textbf{Umkehrung:} $log_b(b^q) = q \Leftrightarrow b^{log_b(q)} = q$\\
+\textbf{Mul/Additivit�t:} $log_b(xy) = log_b(x) + log_b(y)$\\
+oder: $log_b(a^q) = q log_b(a)$\\
+\textbf{Basiswechsel:} $log_b(a) = \frac{log_d(a)}{log_d(b)}$
+
+\section*{Trigonometrische Funktionen}
+\textbf{Tangensfunktion:} $tan(x) := \frac{sin(x)}{cos(x)}$\\
+\textbf{Co-Tangensfunktion:} $cot(x) := \frac{cos(x)}{sin(x)}$
+
+\section*{Zusammenfassung}
+Ein Term ist ein Ausdruck, der f�r einen Zahlenwert steht. Ein Beispiel f�r einen Term ist z.B:\\
+$sin(x)^2 + cos(x^2)$\\
+Wobei $x^2 - 3 = 0$ kein Term ist, sondern eine Gleichung.
+
+F�r die Summen-/Produktnotation gibt man unten die untere Grenze und oben die obere Grenze die Summierung/Produktbildung an. Bsp:\\
+$\sum_{i=1}^{5}a_i := 1 + 2 + 3 + 4 + 5$\\
+$\prod_{0\leq i\leq 5, i ist ungerade}^{} (i + 1):= (1 + 1) \cdot (3 + 1) \cdot (5 + 1)$
+
+Hyperbeln k�nnen nach �hnlichem Schema umgeformt werden. Dabei wird ein Term $\frac{1}{x}$ zu $x^{-1}$. Wenn der Nenner einen Exponenten besitzt kann dieser auch wieder umgeformt werden, damit die Rechengesetze gelten.	$\frac{1}{x^m} = x^{-m}$
+
+Wurzelfunktionen k�nnen umgeformt werden. Wenn man z.B einen Term $\sqrt[2]{x}$ hat, kann dieser zu $x^\frac{1}{2}$ umgeformt werden. Dadurch gelten auch f�r Wurzeln, die Exponentialgesetze.	
+
+Logarithmen k�nnen genutzt werden, wenn bei einer Exponentialfkt. der Exponent unbekannt, aber das Ergebnis bekannt ist. Dabei gibt es den Spezialfall des nat�rlichen Logarithmus. Dieser ist definiert als:\\
+$ln(x) := log_e(x)$
+
+
+
+
+
+%		\section*{Rechenregeln f�r reelle Zahlen}
+%		\begin{equation}
+%		\textbf{Assoziativit�t: }
+%		\begin{aligned}
+%		(x + y) + z = x + (y + z)\notag
+%		\end{aligned}
+%		\end{equation}
+%		
+%		\begin{equation}
+%		\textbf{Neutralit�t der 0: }
+%		\begin{aligned}
+%		x + 0 = x\notag
+%		\end{aligned}
+%		\end{equation}
+%		
+%		\begin{equation}
+%		\textbf{Kommutativit�t: }
+%		\begin{aligned}
+%		(x + y) + z = x + (y + z)\notag
+%		\end{aligned}
+%		\end{equation}

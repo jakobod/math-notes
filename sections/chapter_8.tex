@@ -1,0 +1,107 @@
+\small %oder \tiny oder \scriptsize oder \footnotesize oder \small ...
+\section*{Definitionen}
+\textbf{1. Transponierte Matrix:} Sei $A \in \mathbb{R}^{m \times n}$ eine Matrix. Die transponierte Matrix $A^t \in \mathbb{R}^{m \times n}$ entsteht, indem man Zeilen und Spalten vertauscht: $a^t_{ij} := a_{ji}$.
+
+\textbf{2. Quadratisch:} Matrizen, die genau so viele Zeilen wie Spalten haben, hei�en quadratisch.
+
+\textbf{3. Invertierbar:} Eine Matrix $A$ hei�t invertierbar, wenn die zu $A$ geh�rige lineare Abbildung $f$ (mit $f(\vec{x}) := A\vec{x}$) bijektiv ist (d.h. Isomorphismus).
+Die Matrix der Umkehrabbildung $d^{-1}$ hei�t inverse Matrix $A^{-1}$.
+
+\textbf{4. Determinante:}  Eine Determinante ist eine Funktion $det: \mathbb{K}^{n \times n} \rightarrow \mathbb{K}$ mit den Eigenschaften:
+\begin{enumerate}
+  \item $det E = 1$
+  \item Wenn $A$ zwei gleiche Zeilen besitzt, dann gilt $det A = 0$
+  \item Die Funktion $det$ ist linear in jeder Zeile:
+  \begin{enumerate}
+    \item $det(z_1,\dots,\lambda z_i,\dots,z_n) = \lambda det(z_1,\dots,z_i,\dots,z_n)$
+    \item $det(z_1,\dots,z_i+z,\dots,z_n) = det(z_1,\dots,z_i,\dots,z_n) + det(z_1,\dots,z,\dots,z_n)$
+  \end{enumerate}
+\end{enumerate}
+
+\textbf{5. L�sungsmenge:} Die L�sungsmenge eines LGS ist die Menge aller Vektoren, die alle Gleichungen simultan erf�llen: $\mathbb{L}_{A,\vec{b}} := \{(u_<, \dots,u_n) \in \mathbb{R}^n | A \cdot \vec{u} = \vec{b}\}$
+
+\textbf{6. Rang:} Der Rang einer Matrix $A \in \mathbb{K}^{m \times n}$ ist das Bild ($A : \mathbb{K}^n \rightarrow \mathbb{K}^m$).
+
+\textbf{7. Zeilenrang:} Der Zeilenrang einer Matrix ist die Maximalzahl linear unabh�ngiger Zeilen.
+
+\textbf{8. Spaltenrang:} Der Spaltenrang einer Matrix ist die Maximalzahl linear unabh�ngiger Spalten.
+
+\textbf{9. linear unabh�ngig:} Die Vektoren $\vec{a_1},\dots,\vec{a_n}$ hei�en linear unabh�ngig, wenn $\lambda_1\vec{a_1} + \dots + \lambda_n\vec{a_n} = \vec{0}$
+nur f�r die triviale L�sung $\lambda_1 = \dots = \lambda_n = 0$ gilt.
+
+\textbf{10. Unterbestimmt:} Ein LGS ist unterbestimmt, wenn der Rang von $A$ kleiner als $n$ ist. D.h. wenn es weniger Gleichungen als Variablen gibt ($m < n$).
+
+\textbf{11. �berbestimmt:} Ein LGS ist �berbestimmt, wenn der Rang von $A$ gr��er als $n$ ist. D.h. wenn es mehr Gleichungen als Variablen gibt ($m > n$).
+
+\textbf{12. Lineare Differentialgleichung:} Wir ersetzen die Potenz $x^n$ durch die $n$-fache Ableitung $f^{(n)}$ einer Funktion $f$ und suchen eine L�sung f�r:
+$a_nf^{(n)} + \dots a_1f' + a_0f = 0$
+
+\textbf{13. Erzeugendensystem:} Sei $X \subset V$. X ist ein Erzeugendensystem, wenn jeder beliebige Vektor $v \in V$ durch eine Linearkombination $\lambda_1 \cdot v_1 + \dots + \lambda_n \cdot v_n$ darstellbar ist.
+
+\textbf{14. Basis:} Sei $V$ ein Vektorraum. Eine Menge $B \subset V$ hei�t Basis, wenn $B$ linear unabh�ngig ist und $V$ erzeugt. Dabei enth�lt eine Basis immer genau so viele Vektoren, wie der Vektorraum Dimensionen: $dim\mathbb{R}^n = n$ Basisvektoren.
+
+\textbf{15. Kern:} Der Kern einer Matrix $A$ ist eine Menge von Vektoren, die durch Multiplikation mit einer Matrix $M$ den Nullvektor erzeugen. geschrieben: $Kern(M)$
+
+\textbf{16. Eindeutig l�sbar:} Ein quadratisches LGS $A\vec{x} = \vec{b}$ ist genau dann eindeutig l�sbar, wenn $detA \neq 0$ .
+
+\section*{Rechenregeln:}
+$A = 
+\begin{pmatrix}
+a_{1,1} & \dots  & a_{1,n} \\
+\vdots  & \ddots & \vdots  \\
+a_{m,1} & \dots  & a_{m,n} \\
+\end{pmatrix}
+wobei A^t =
+\begin{pmatrix}
+a_{1,1} & \dots  & a_{m,1} \\
+\vdots  & \ddots & \vdots  \\
+a_{1,n} & \dots  & a_{m,n} \\
+\end{pmatrix}
+$
+\\
+\textbf{Addition:} $A + B =
+\begin{pmatrix}
+a_{1,1} + b_{1,1} & \dots  & a_{1,n} + b_{1,n} \\
+\vdots  	& \ddots & 		 \vdots \\
+a_{m,1} + b_{m,1} & \dots  & a_{m,n} + b_{m,n} \\
+\end{pmatrix}
+$\\\\\\
+\textbf{Multiplikation:} \\$A \cdot B =$
+\begin{tabular}{c l} 
+  & $ 
+  \begin{pmatrix} 
+  \rnode{b11}{b_{1,1}} \\ 
+  \rnode{b21}{b_{2,1}}
+  \end{pmatrix}$ \\
+  $ \begin{pmatrix} 
+  \rnode{a11}{a_{1,1}} & \rnode{a12}{a_{1,2}} \\ 
+  \rnode{a21}{a_{2,1}} & \rnode{a22}{a_{2,2}} \\ 
+  \rnode{a31}{a_{3,1}} & \rnode{a32}{a_{3,2}} 
+  \end{pmatrix} $ & 
+  $ \begin{pmatrix} 
+  a_{1,1} \cdot b_{1,1} + a_{1,2} \cdot b_{2,1} \\ 
+  a_{2,1} \cdot b_{1,1} + a_{2,2} \cdot b_{2,1} \\
+  a_{3,1} \cdot b_{1,1} + a_{3,2} \cdot b_{2,1}
+  \end{pmatrix} $ 
+\end{tabular}\\
+\textbf{Einheitsmatrix:} 
+$
+\begin{pmatrix}
+1 & 0 & \dots & 0 \\
+0 & 1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & 1 \\ 
+\end{pmatrix}
+$\\
+Die Einheitsmatrix ist das neutrale Element f�r Matrizen.\\
+Es gilt also: $A \cdot E = A$\\\\
+\textbf{Berechnung der Determinanten:}\\
+F�r A =
+$\begin{pmatrix}
+a_{11} & * & \dots & * \\
+0 & a_{22} & * & \vdots \\
+\vdots & & & \\
+0 & \dots & 0 & a_{nn} \\
+\end{pmatrix}$
+gilt $detA = a_{11} \dots a_{n,n}$
+Dies geht nur bei Quadratischen Matrizen.
