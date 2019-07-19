@@ -20,7 +20,7 @@
   \item [Komplementärmenge:] 
     Sei $E(x)$ eine Aussageform über der Menge $U$.\\
     Dann heißen die Mengen 
-    $M = {x \in U | E(x)}$ und $\bar{M} = {x \in U | \neg E(x)}$ in $U$ 
+    $M = \{x \in U | E(x)\}$ und $\bar{M} = \{x \in U | \neg E(x)\}$ in $U$ 
     komplemetär.\\
     $\bar{M}$ heißt \textbf{Komplementärmenge} oder \textbf{Komplement} von 
     $M$ in $U$.
@@ -38,34 +38,34 @@
   \item [Potenzmenge:] 
     Sei $M$ eine Menge. Die Menge aller Teilmengen von $M$ heißt 
     \textbf{Potenzmenge} von $M$ und wird $\mathcal{P}(M)$ notiert: \\
-    $\mathcal{P}(M) := {X | X \subseteq M}$
+    $\mathcal{P}(M) := \{X | X \subseteq M\}$
 
   \item [Vereinigung:] 
     Seien $M$ und $N$ Mengen. Die Vereinigungsmenge ist Definiert durch: 
-    $M \cup N := {x | x \in M oder x \in N}$
+    $M \cup N := \{x | x \in M \text{ }oder\text{ } x \in N\}$
 
     %%% TODO: this should be fancier! UND/ODER should have space befire and after.
   \item [Schnitt:] 
     Seien $M$ und $N$ Mengen. Der Schnitt ist Definiert als 
-    $M \cap N := {x | x \in M und x \in N}$
+    $M \cap N := \{x | x \in M \text{ }und\text{ } x \in N\}$
 
   \item [Differenz:] 
     Seien $M$ und $N$ Mengen. Die Differenz ist definiert durch 
-    $M | N := {x | x \in M und x \notin N}$
+    $M | N := \{x | x \in M \text{ }und\text{ } x \notin N\}$
 
   \item [Mengenfamilie:] 
     Die Mengenfamilie $\mathcal{F}$ sei definiert als 
     $\mathcal{F} \subseteq \mathcal{P}(M)$ \\
     Dann ist die Vereinigung aller Mengen aus $\mathcal{F}$:\\
-    $\bigcup\mathcal{F} = {x | \exists N \in \mathcal{P}(M) : (N \in \mathcal{F} \wedge x \in N)}$ \\
+    $\bigcup\mathcal{F} = \{x | \exists N \in \mathcal{P}(M) : (N \in \mathcal{F} \wedge x \in N)\}$ \\
     Der Durchschnitt aller Mengen aus $\mathcal{F}$: \\ 
-    $\bigcap \mathcal{F} = {x | \forall N \in \mathcal{P}(M) : (N \in \mathcal{F} \rightarrow x \in N)} \cap \bigcup \mathcal{F}$ 
+    $\bigcap \mathcal{F} = \{x | \forall N \in \mathcal{P}(M) : (N \in \mathcal{F} \rightarrow x \in N)\} \cap \bigcup \mathcal{F}$ 
 
   \item [kartesisches Produkt:] 
     Seien $A$ und $B$ Mengen.\\
     Das \textbf{kartesische Produkt} (auch Kreuzprodukt) von $A$ und $B$ ist 
     definiert durch\\
-    $A \times B := {(a,b) | a \in A und b \in B}$
+    $A \times B := \{(a,b) | a \in A und b \in B\}$
 
   \item [Isomorphie:] 
     Zwei Mengen $X$ und $Y$ sind \textbf{isomorph}, wenn dich ihre Elemente eins
@@ -139,8 +139,8 @@
 \begin{framed} [Zahlenmengen]
   \begin{description}
     \item [natürliche Zahlen:] $\mathbb{N} = {0,1,2,\dots}$
-    \item [ganze Zahlen:] $\mathbb{Z} = {0,-1,1,-2,2,\dots}$
-    \item [rationale Zahlen:] $\mathbb{Q} = {\frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, n \neq 0}$
+    \item [ganze Zahlen:] $\mathbb{Z} = \{0,-1,1,-2,2,\dots\}$
+    \item [rationale Zahlen:] $\mathbb{Q} = \{\frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, n \neq 0\}$
     \item [reelle Zahlen:] $\mathbb{R}$
     \item [irrationale Zahlen:] $\mathbb{R}\backslash \mathbb{Q}$
     \item [komplexe Zahlen:] $\mathbb{C}$
@@ -152,18 +152,18 @@
 
 \begin{framed} [Schreibweisen Mengen]
   \begin{description}
-    \item [explizit:] $M = {1,2,3,4}$
+    \item [explizit:] $M = \{1,2,3,4\}$
     \item [verbal:] \dq{}Die Menge aller nicht-negativen, geraden Ganzzahlen\dq{}
-    \item [unendliche Mengen:] $M := {0,2,4,6,8,\dots}$
-    \item [implizit:] $M := {x \in \mathbb{N} | x ist gerade}$
+    \item [unendliche Mengen:] $M := \{0,2,4,6,8,\dots\}$
+    \item [implizit:] $M := \{x \in \mathbb{N} | x ist gerade\}$
   \end{description}
 \end{framed}
 
 \vspace{-.6cm}
 
 \begin{framed} [Potenzmenge:] 
-  Jede mögliche Teilmenge einer Menge. Bsp: $M := {1,2,3}$ dann ist
-  $\mathcal{P}(M) := {\emptyset},{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}$.
+  Jede mögliche Teilmenge einer Menge. Bsp: $M := \{1,2,3\}$ dann ist
+  $\mathcal{P}(M) := \{\emptyset\},\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}$.
 \end{framed}
 
 \vspace{-.6cm}

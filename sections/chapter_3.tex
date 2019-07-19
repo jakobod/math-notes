@@ -1,102 +1,162 @@
-\section*{Definitionen}
+\subsection*{Definitionen}
 \vspace{-0.3cm}
 
-\textbf{1. Relation:} Eine \textbf{Relation} zwischen \textit{A} und \textit{B} ist eine Teilmenge von \textit{A $\times$ B}. Man schreibt \textit{a}R\textit{b}.\\
-\textit{a}R\textit{b} genau dann, wenn (\textit{a}, \textit{b}) $\in$ \textit{R}
+\begin{description}
+  \item [Relation:] 
+    Eine \textbf{Relation} zwischen $A$ und $B$ ist eine Teilmenge von 
+    $A \times B$. Man schreibt $aRb$.\\
+    $aRb \leftrightarrow (a, b) \in R$
 
-\textbf{2. Inverse Relation:} Sei R $\subseteq$ A $\times$ B eine Relation zwischen \textit{A} und \textit{B}.
-Die \textbf{Inverse Relation zu \textit{R}} wird $R^{-1}$ notiert.\\
-$R^{-1}$ = \{(y,x) $\in$ B $\times$ A | (x,y) $\in$ R\}
+  \item [Inverse Relation:] 
+    Sei $R \subseteq A \times B$ eine Relation zwischen $A$ und $B$.
+    Die \textbf{Inverse Relation} zu $R$ wird $R^{-1}$ notiert.\\
+    $R^{-1} = \{(y,x) \in B \times A | (x,y) \in R\}$
 
-\textbf{3. Komposition:} Seien R $\subseteq$ $M_1$ $\times$ $M_2$ und S $\subseteq$ $M_2$ $\times$ $M_3$ zweistellige Relationen.\\
-Die Verkn�pfung (R $\circ$ S) $\subseteq$ ($M_1$ $\times$ $M_3$) hei�t Komposition der Relationen R
-und S:\\
-R $\circ$ S := \{(x,z) | es existiert y $\in$ $M_2$ mit (x,y) $\in$ R und (y,z) $\in$ S\}
+  \item [Komposition:]
+    Seien $R \subseteq M_1 \times M_2$ und $S \subseteq M_2 \times M_3$ 
+    zweistellige Relationen.\\
+    Die Verknüpfung $(R \circ S) \subseteq (M_1 \times M_3)$ heißt 
+    \textbf{Komposition} der Relationen $R$ und $S$: \\
+    $R \circ S := \{(x,z) | \exists y \in M_2 : (x,y) \in R \wedge (y,z) \in S\}$
 
-\textbf{4. Reflexivit�t:} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{reflexiv}, wenn jedes Element in Relation zu sich selbst steht:\\
-f�r alle a $\in$ A : (a,a) $\in$ R
+  \item [Reflexivität:]
+    Eine Relation $R \subseteq A^2$ über einer Menge $A$ heißt \textbf{reflexiv}, 
+    wenn jedes Element in Relation zu sich selbst steht:\\
+    $\forall a \in A : (a,a) \in R$
 
-\textbf{5. Symmetrie:} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{symmetrisch}, wenn die Reihenfolge der Elemente keine Rolle spielt: (a,b) $\in$ R, dann (b,a) $\in$ R.\\
-\textbf{Antisymmetrie} ist das Gegenteil: (a,b) $\in$ R, dann $\neg$(b,a) $\in$ R.
+  \item [Symmetrie:]
+    Eine Relation $R \subseteq A^2$ über einer Menge $A$ heißt 
+    \textbf{symmetrisch}, wenn die Reihenfolge der Elemente keine Rolle spielt:\\
+    $(a,b) \in R \rightarrow (b,a) \in R$
+  
+  \item [Antisymmetrie:]
+    Das Gegenteil von Symmetrie:\\
+    $(a,b) \in R \rightarrow \neg(b,a) \in R$
 
-\textbf{6. Antisymmetrie:} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{antisymmetrisch}, wenn aus der Symmetrie die Identit�t folgt:
-(a,b) $\in$ R und (b,a) $\in$ R, dann a = b
+  \item [Antisymmetrie:] 
+    Eine Relation R $\subseteq A^2$ über einer Menge $A$ heißt 
+    \textbf{antisymmetrisch}, wenn aus der Symmetrie die Identität folgt: \\
+    $((a,b) \in R \wedge (b,a) \in R) \rightarrow a = b$
 
-\textbf{7. Transitivit�t:} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{transitiv}, wenn aus einer Kette das mittlere Element entfernt werden kann:\\
-(a,b) $\in$ R und (b,c) $\in$ R, dann (a,c) $\in$ R
+  \item [Transitivität:] 
+    Eine Relation $R \subseteq A^2$ über einer Menge $A$ heißt \textbf{transitiv}, 
+    wenn aus einer Kette das mittlere Element entfernt werden kann:\\
+    $((a,b) \in R \wedge (b,c) \in R) \rightarrow (a,c) \in R$
 
-\textbf{8. Totalit�t} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{total} (auch: linear), wenn je zwei Elemente in mindestens einer Richtung
-in Relation stehen: \\
-F�r alle (a,b) $\in$ A : (a,b) $\in$ R oder (b,a) $\in$ R
+  \item [Totalität] 
+    Eine Relation $R \subseteq A^2$ über einer Menge $A$ heißt \textbf{total} 
+    (auch: linear), wenn je zwei Elemente in mindestens einer Richtung in 
+    Relation stehen: \\
+    $\forall (a,b) \in A : (a,b) \in R \vee (b,a) \in R$
 
-\textbf{9. Teilbarkeitsrelation:} Sei a $\in$ $\mathbb{N}^+$, b $\in$ $\mathbb{Z}$.\\
-Wir schreiben a|b, wenn \glqq a ein Teiler von b\grqq ist, d.h. wenn gilt:
-$\exists$k $\in$ $\mathbb{Z}$ : b = k $\cdot$ a
+  \item [Teilbarkeitsrelation:] 
+    Sei $a \in \mathbb{N}^+, b \in \mathbb{Z}$.\\
+    Wir schreiben $a|b$, wenn \dq{}a ein Teiler von b\dq{} ist, d.h. wenn gilt:\\
+    $\exists k \in \mathbb{Z} : b = k \cdot a$
 
-\textbf{10. Rechtseindeutigkeit:} Eine Relation R $\subseteq$ A $\times$ B hei�t \textbf{rechtseindeutig} (nacheindeutig) wenn f�r alle a $\in$ A gilt: \\
-Wenn (a,b) $\in$ R und (a,c) $\in$ R, dann b = c.
+  \item [Rechtseindeutigkeit:]
+    Eine Relation $R \subseteq A \times B$ heißt \textbf{rechtseindeutig} 
+    (nacheindeutig) wenn Für alle $a \in A$ gilt:\\
+    $((a,b) \in R \wedge (a,c) \in R) \rightarrow b = c$
 
-\textbf{11. Linkseindeutigkeit:} Eine Relation R $\subseteq$ A $\times$ B hei�t \textbf{linkseindeutig}: f�r alle a $\in$ B gilt: \\
-Wenn (b,a) $\in$ R und (c,a) $\in$ R, dann b = c.
+  \item [Linkseindeutigkeit:]
+    Eine Relation $R \subseteq A \times B$ heißt \textbf{linkseindeutig} wenn
+    für alle $a \in B$ gilt: \\
+    $((b,a) \in R \wedge (c,a) \in R) \rightarrow b = c$
 
-\textbf{12. Eindeutigkeit:} Eine Relation R $\subseteq$ A $\times$ B hei�t \textbf{eindeutig}: R rechtseindeutig und R linkseindeutig
+  \item [Eindeutigkeit:]
+    Eine Relation $R \subseteq A \times B$ heißt \textbf{eindeutig} wenn:\\
+    R rechtseindeutig und R linkseindeutig.
 
-\textbf{13. Linkstotal:} Eine Relation R $\subseteq$ A $\times$ B hei�t \textbf{linkstotal}: F�r alle a $\in$ A existiert b $\in$ B mit (a,b) $\in$ R.
+  \item [Linkstotal:]
+    Eine Relation $R \subseteq A \times B$ heißt \textbf{linkstotal} wenn: \\
+    $\forall a \in A \exists b \in B : (a,b) \in R$
 
-\textbf{14. Rechtstotal:} Eine Relation R $\subseteq$ A $\times$ B hei�t \textbf{rechtstotal}: F�r alle b $\in$ B ex. a P$\in$ A mit (a,b) $\in$ R.
+  \item [Rechtstotal:] 
+    Eine Relation $R \subseteq A \times B$ heißt \textbf{rechtstotal}:\\
+    $\forall b \in B \exists a \in A : (a,b) \in R$
 
-\textbf{15. Irreflexiv:} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{irreflexiv} f�r alle a $\in$ A mit (a,a) $\notin$ R
+  \item [Irreflexiv:]
+    Eine Relation $R \subseteq A^2$ über einer Menge $A$ heißt 
+    \textbf{irreflexiv} wenn:\\
+    $\forall a \in A : (a,a) \notin R$
 
-\textbf{16. Alternativ:} Eine Relation R $\subseteq$ $A^2$ �ber einer Menge A hei�t \textbf{alternativ} f�r alle a,b$\in$R mit (a,b) $\in$ R xor (b,a) $\in$ R
+  \item [Alternativ:]
+    Eine Relation $R \subseteq A^2$ über einer Menge $A$ heißt 
+    \textbf{alternativ} wenn: \\
+    $\forall a,b \in R : (a,b) \in R xor (b,a) \in R$
 
-\textbf{17. �quivalenzrelation:} Ist eine Relation \textasciitilde{} reflexiv, symmetrisch und transitiv, so wird sie \textbf{�quivalenzrelation} genannt.
+  \item [Äquivalenzrelation:]
+    Ist eine Relation \textasciitilde{} reflexiv, symmetrisch und transitiv, 
+    so wird sie \textbf{Äquivalenzrelation} genannt.
 
-\textbf{18. �quivalenzklasse:} Gegeben sei eine �quivalenzrelation R �ber der Menge A.\\
-Dann ist f�r a $\in$ A: $[a]_R$ = \{x | (a,x) $\in$ R\} die \textbf{�quivalenzklasse} von a.  
+  \item [Äquivalenzklasse:]
+    Gegeben sei eine Äquivalenzrelation $R$ über der Menge $A$. Dann ist Für 
+    $a \in A: [a]_R = \{x | (a,x) \in R\}$ die \textbf{Äquivalenzklasse} von $a$.  
 
-\textbf{19. Zerlegung:} Sei A eine nicht.leere Menge. Eine \textbf{Zerlegung} (oder \textbf{Partition}) von A ist eine Mengenfamilie $\mathcal{Z}$ $\subseteq$ $\mathcal{P}$(A) mit:\\
-1. �berdeckung: A $\subseteq$ $\bigcup$ $\mathcal{Z}$\\
-2. $\emptyset \notin \mathcal{Z}$\\
-3. Disjunktivit�t: F�r alle $M_1, M_2 \in \mathbb{Z}$ gilt entweder $M_1 = M_2$ oder $M_1 \cap M_2 = \emptyset$\\
-Eine Zerlegung ist also eine Einteilung von A in nicht leere, paarweise elementfremde Teilmengen, deren Vereinigung mit A �bereinstimmt.
+  \item [Zerlegung:]
+    Sei $A$ eine nichtleere Menge. Eine \textbf{Zerlegung} (oder 
+    \textbf{Partition}) von $A$ ist eine Mengenfamilie 
+    $\mathcal{Z} \subseteq \mathcal{P}(A)$ mit:
+    \begin{enumerate}
+      \item Überdeckung: $A \subseteq \bigcup \mathcal{Z}$
+      \item $\emptyset \notin \mathcal{Z}$
+      \item Disjunktivität: $\forall M_1, M_2 \in \mathbb{Z}$ gilt entweder 
+            $M_1 = M_2 \vee M_1 \cap M_2 = \emptyset$
+    \end{enumerate}
+    Eine Zerlegung ist also eine Einteilung von $A$ in nicht leere, paarweise 
+    elementfremde Teilmengen, deren Vereinigung mit $A$ übereinstimmt.
 
-\textbf{20. Abschluss:} Sei R eine Relation �ber A und sei $\phi$ (reflexiv, usw.) eine Eigenschaft von Relationen.\\
-Die Relation R* hei�t \textbf{Abschluss} von R bez�glich $\phi$, wenn gilt:\\
-1. R* besitzt die Eigenschaft $\phi$\\
-2. R $\subseteq$ R*\\
-3. F�r alle Relationen D, die R umfassen und ebenfalls die Eigenschaft $\phi$ besitzen, gilt R* $\subseteq$ S.\\
-Mit anderen Worten: R* ist die kleinste Relation, die R umfasst und die Eigenschaft $\phi$ besitzt.\\
-Besitzt R bereits die Eigenschaft, so f�gt der Abschluss nichts hinzu: R* = R
+  \item [Abschluss:]
+    Sei $R$ eine Relation über $A$ und sei $\phi$ (reflexiv, usw.) eine 
+    Eigenschaft von Relationen.\\
+    Die Relation $R^*$ heißt \textbf{Abschluss} von $R$ bezüglich $\phi$, wenn 
+    gilt:
+    \begin{enumerate}
+      \item $R*$ besitzt die Eigenschaft $\phi$
+      \item $R \subseteq R*$
+      \item Für alle Relationen $D$, die $R$ umfassen und ebenfalls die 
+            Eigenschaft $\phi$ besitzen, gilt $R* \subseteq S$
+    \end{enumerate}
+    Mit anderen Worten: $R*$ ist die kleinste Relation, die $R$ umfasst und die 
+    Eigenschaft $\phi$ besitzt.\\
+    Besitzt $R$ bereits die Eigenschaft, so fügt der Abschluss nichts hinzu: 
+    $R* = R$
 
-%		\textbf{22. Reflexiver Abschluss:} \\r(R) von R $\subseteq$ A $\times$ A:
-%		r(R) = R $\cup$ \{(a,a) | a $\in$ A\}
-%		
-%		\textbf{23. Symmetrischer Abschluss:} \\s(R) = R $\cup$ \{(b,a) | (a,b) $\in$ R\}
-%		
-%		\textbf{24. Transitiver Abschluss} \\t(R) = R$\cup$ \{(a,c) | es existiert $_{b_1,b_2,\dots,b_n}$ mit (a,$b_1$), ($b_i$,$b_{i+1}$), ($b_n$,$c_1$) $\in$ R\}
+  %		\textbf{22. Reflexiver Abschluss:} \\r(R) von R $\subseteq$ A $\times$ A:
+  %		r(R) = R $\cup$ \{(a,a) | a $\in$ A\}
+  %		
+  %		\textbf{23. Symmetrischer Abschluss:} \\s(R) = R $\cup$ \{(b,a) | (a,b) $\in$ R\}
+  %		
+  %		\textbf{24. Transitiver Abschluss} \\t(R) = R$\cup$ \{(a,c) | es existiert $_{b_1,b_2,\dots,b_n}$ mit (a,$b_1$), ($b_i$,$b_{i+1}$), ($b_n$,$c_1$) $\in$ R\}
 
-\textbf{21. Ordnung:} Ist eine Relation $\leq$ reflexiv, antisymmetrisch und transitiv, so ist sie eine \textbf{Halbordnung} (partielle Ordnung)\\
-a und b hei�en \textbf{vergleichbar} bzgl. $\leq$, falls a $\leq$ b oder b $\leq$ a gilt (sonst unvergleichbar).\\
-Ist eine Halbordnung zus�tzlich total, hei�t die \textbf{(totale) Ordnung} und A hei�t durch $\leq$ geordnet.
+  \item [Ordnung:] 
+    Ist eine Relation $\leq$ reflexiv, antisymmetrisch und 
+    transitiv, so ist sie eine \textbf{Halbordnung} (partielle Ordnung)\\
+    $a$ und $b$ heißen \textbf{vergleichbar} bzgl. $\leq$, falls 
+    $a \leq b \vee b \leq a$ gilt (sonst unvergleichbar).\\
+    Ist eine Halbordnung zusätzlich total, heißt die \textbf{(totale) Ordnung} 
+    und $A$ heißt durch $\leq$ geordnet.
 
-\textbf{22. minimal/maximal:} Sei $\leq$ eine Halbordnungsrelation auf A. Sei M eine nichtleere Teilmenge von A.\\
-Ein Element m $\in$ M hei�t \textbf{maximal} Element in M, wenn f�r alle m' $\in$ M, aus gilt: aus m $\leq$ m' folgt m = m'.\\
-m hei�t \textbf{minimales} Element, wenn f�r alle m' $\in$ M gilt: Aus m' $\leq$ m folgt m = m'.
+  \item [minimal/maximal:]
+    Sei $\leq$ eine Halbordnungsrelation auf $A$. Sei $M$ eine nichtleere 
+    Teilmenge von $A$.\\
+    Ein Element $m \in M$ heißt \textbf{maximal} Element in $M$, wenn:\\
+    $\forall m' \in M : m \leq m' \Rightarrow m = m'$\\
+    $m$ heißt \textbf{minimales} Element, wenn:\\
+    $\forall m' \in M : m' \leq m \Rightarrow m = m'$
+\end{description}
 
-\vspace{-0.6cm}
-
-\section*{spezielle Relationen}
-\vspace{-0.3cm}
+\subsection*{Spezielle Relationen}
 Es gibt spezielle Relationen, die im weiteren auch noch genutzt werden:\\
-\textbf{Leere Relation:} R = $\emptyset$\\
-\textbf{All-Relation:} R = A $\times$ B\\
-\textbf{Identit�t (�ber M):} R = $Id_M$ = $\triangle_M$ := \{(x,x) | x $\in$ M\} 
+\begin{tabular} {l l}
+  \textbf{Leere Relation:} & $R = \emptyset$\\
+  \textbf{All-Relation:} &  $R = A \times B$\\
+  \textbf{Identität (über M):} & $R = Id_M = \triangle_M := \{(x,x) | x \in M\}$
+\end{tabular}
 
-\vspace{-0.35cm}
 
-
-
-%		\textbf{S�tze}. Sei R eine Relation �ber A.
+%		\textbf{Sätze}. Sei R eine Relation über A.
 %		\vspace{-0.15cm}
 %		\begin{itemize}
 %			\setlength\itemsep{-0.05cm}
@@ -106,28 +166,28 @@ Es gibt spezielle Relationen, die im weiteren auch noch genutzt werden:\\
 %			\item R ist antisymmetrisch genau dann, wenn R $\cap R^{-1} \subseteq \triangle_A$ 
 %		\end{itemize}
 %	
-%		Der \textbf{Abschluss} einer Relation ist das Hinzuf�gen von einer Eigenschaft (reflexivit�t usw.), durch vereinigen mit den jeweils fehlenden Tupeln.
+%		Der \textbf{Abschluss} einer Relation ist das Hinzufügen von einer Eigenschaft (reflexivität usw.), durch vereinigen mit den jeweils fehlenden Tupeln.
 %		
-%		Eine �quivalenzrelation �ber der Menge A erzeugt immer eine Zerlegung von A. Gleichzeitig bestimmt jede Zerlegung von A immer eine �quivalenzrelation. Dies wird am Beispiel der Restklasse Modulo (2) deutlich:\\
+%		Eine Äquivalenzrelation über der Menge A erzeugt immer eine Zerlegung von A. Gleichzeitig bestimmt jede Zerlegung von A immer eine Äquivalenzrelation. Dies wird am Beispiel der Restklasse Modulo (2) deutlich:\\
 %		$[0]$ = \{0,2,4,6,$\dots$\}\\ 
 %		$[1]$ = \{1,3,5,6,$\dots$\}\\
-%		Dies sind �quivalenzklassen -- Gleichzeitig also auch eine Zerlegung der Menge der nat�rlichen Zahlen $\mathbb{N}$.
-%		Diese �quivalenzklassen k�nnen dann wieder vereinigt werden, und man erh�lt die urspr�ngliche Menge--hier also die Menge der nat�rlichen Zahlen $\mathbb{N}$
+%		Dies sind Äquivalenzklassen -- Gleichzeitig also auch eine Zerlegung der Menge der natürliche Zahlen $\mathbb{N}$.
+%		Diese Äquivalenzklassen können dann wieder vereinigt werden, und man erhält die ursprüngliche Menge--hier also die Menge der natürliche Zahlen $\mathbb{N}$
 %		
 %		
 
 
 %		\section*{Zusammenfassung}
 %		\vspace{-0.2cm}
-%		Eine Relation ist eine Menge aus Paaren in der Form (a,b) aus einem Kreuzprodukt A $\times$ B. Die Menge R enth�lt nur die Paare, die durch diese Beziehung verkn�pft sind $\rightarrow$ Teilmenge.\\
-%		Schreibweisen f�r Relationen sind:\\
+%		Eine Relation ist eine Menge aus Paaren in der Form (a,b) aus einem Kreuzprodukt A $\times$ B. Die Menge R enthält nur die Paare, die durch diese Beziehung verknüpft sind $\rightarrow$ Teilmenge.\\
+%		Schreibweisen Für Relationen sind:\\
 %		\textbf{Infix-Notation:} x$\mathcal{R}$y\\
-%		\textbf{Pr�fix Notation:} $\mathcal{R}$xy\\
+%		\textbf{Präfix Notation:} $\mathcal{R}$xy\\
 %		\textbf{Postfix-Notation:} xy$\mathcal{R}$\\
 %		
 %		\vspace{-0.25cm}
 %		
-%		Beispiele f�r Relationen sind z.B:\\
+%		Beispiele Für Relationen sind z.B:\\
 %		\vspace{-0.4cm}
 %		\begin{itemize}
 %			\setlength\itemsep{-0.05cm}
@@ -136,6 +196,6 @@ Es gibt spezielle Relationen, die im weiteren auch noch genutzt werden:\\
 %		\end{itemize}
 %		
 %		Bei der \textbf{Komposition von Relationen} werden zwei Relationen zusammengefasst. geschrieben: R $\circ$ S. Dies ist dann die Teilmenge aus $M_1 \times M_3$\\
-%		F�r komponierte Relationen gelten die Rechengesetze genauso, wie f�r Mengen. (siehe Rechengesetze VL 2)\\
+%		Für komponierte Relationen gelten die Rechengesetze genauso, wie Für Mengen. (siehe Rechengesetze VL 2)\\
 %		
 %		\vspace{-0.25cm}
