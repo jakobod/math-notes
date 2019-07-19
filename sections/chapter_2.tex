@@ -1,128 +1,177 @@
-\section*{Definitionen}
-\vspace{-0.3cm}
+\subsection*{Definitionen}
 
-\textbf{1. Menge:} Eine \textbf{Menge} ist eine Zusammenfassung \textbf{wohlunterschiedenen Objekten} zu einem Ganzen.\\
-Es muss zudem einwandfrei entscheidbar sein, ob ein Objekt der Gesamtheit angeh�rt oder nicht.\\
-Die Objekte der Menge hei�en \textbf{Elemente} der Menge.
+\begin{description}
+  \setlength{\itemsep}{-.2cm}
 
-\textbf{2. gleichheit von Mengen:} Zwei Mengen \textit{A} und \textit{B} hei�en \textbf{gleich} (\textit{A = B}) genau dann, wenn jedes Element aus \textit{A} auch ein Element aus \textit{B} ist -- und umgekehrt.\\
-f�r alle \textit{x $\in$ A} gilt auch \textit{x $\in$ B} und f�r alle \textit{y $\in$ B} gilt auch \textit{y $\in$ A}\\
-Sind die Mengen \textit{A} und \textit{B} nicht gleich, notiert man \textit{A $\neq$ B}.
+  \item [Menge]
+    Eine \textbf{Menge} ist eine Zusammenfassung 
+    \textbf{wohlunterschiedenen Objekten} zu einem Ganzen.\\
+    Es muss zudem einwandfrei entscheidbar sein, ob ein Objekt der Gesamtheit 
+    angehört oder nicht.\\
+    Die Objekte der Menge heißen \textbf{Elemente} der Menge.
 
-\textbf{3. Komplement�rmenge:} Sei \textit{E(x)} eine Aussageform �ber der Menge \textit{U}.\\
-Dann hei�en die Mengen \textit{M = \{x $\in$ U | E(x)\}} und \textit{\begin{math}\bar{M}\end{math} = \{x $\in$ U | $\neg$E(x)\}} in \textit{U} komplemet�r.\\
-\textit{\begin{math}\bar{M}\end{math}} hei�t \textbf{Komplement�renge} oder \textit{Komplement} vom \textit{M} in \textit{U}.
+  \item [gleichheit von Mengen:] 
+    Zwei Mengen $A$ und $B$ heißen \textbf{gleich} ($A = B$) genau dann, wenn 
+    jedes Element aus $A$ auch ein Element aus $B$ ist -- und umgekehrt.\\
+    für alle $x \in A$ gilt auch $x \in B$ und für alle $y \in B$ gilt auch 
+    $y \in A$ \\
+    Sind die Mengen $A$ und $B$ nicht gleich, notiert man $A \neq B$.
 
-\textbf{4. Leere Menge:} Die Menge, die kein Element enth�lt, hei�t \textbf{leere Menge} und wird mit \textit{$\emptyset$} bezeichnet.
+  \item [Komplementärmenge:] 
+    Sei $E(x)$ eine Aussageform über der Menge $U$.\\
+    Dann heißen die Mengen 
+    $M = {x \in U | E(x)}$ und $\bar{M} = {x \in U | \neg E(x)}$ in $U$ 
+    komplemetär.\\
+    $\bar{M}$ heißt \textbf{Komplementärmenge} oder \textbf{Komplement} von 
+    $M$ in $U$.
 
-\textbf{5. Teilmenge:} Eine Menge \textit{B} hei�t \textbf{Teilmenge} einer Menge \textit{A} genau dann, wenn jedes Element von \textit{B} auch ein Element von \textit{A} ist. (\textit{B $\subseteq$ A gilt gdw. $\forall$x : x $\in$ B $\rightarrow$ x $\in$ A}) .\\
-\textit{A} hei�t dann \textbf{Obermenge} von \textit{B}. \textit{B} hei�t echte Teilmenge von \textit{A}.
+  \item [Leere Menge:] 
+    Die Menge, die kein Element enthält, heißt \textbf{leere Menge} und wird mit 
+    $\emptyset$ bezeichnet.
 
-\textbf{6. Potenzmenge:} Sei \textit{M} eine Menge. Die Menge aller Teilmengen von \textit{M} hei�t \textbf{Potenzmenge} von \textit{M} und wird \textit{$\mathcal{P}$(M)} notiert: \\\textit{$\mathcal{P}$(M) := \{X | X $\subseteq$ M\}}
+  \item [Teilmenge:] 
+    Eine Menge $B$ heißt \textbf{Teilmenge} einer Menge $A$ genau dann, wenn 
+    jedes Element von $B$ auch ein Element von $A$ ist. ($B \subseteq A$ gilt 
+    gdw. $\forall x : x \in B \rightarrow x \in A$) .\\
+    $A$ heißt dann \textbf{Obermenge} von $B$. $B$ heißt echte Teilmenge von $A$.
 
-\textbf{7. Vereinigung:} Seien M und N Mengen. Die Vereinigungsmenge ist Definiert durch: \textit{M $\cup$ N := \{x | x $\in$ M oder x $\in$ N\}}
+  \item [Potenzmenge:] 
+    Sei $M$ eine Menge. Die Menge aller Teilmengen von $M$ heißt 
+    \textbf{Potenzmenge} von $M$ und wird $\mathcal{P}(M)$ notiert: \\
+    $\mathcal{P}(M) := {X | X \subseteq M}$
 
-\textbf{8. Schnitt:} Seien M und N Mengen. Der Schnitt ist Definiert als \textit{M $\cap$ N := \{x | x $\in$ M und x $\in$ N\}}
+  \item [Vereinigung:] 
+    Seien $M$ und $N$ Mengen. Die Vereinigungsmenge ist Definiert durch: 
+    $M \cup N := {x | x \in M oder x \in N}$
 
-\textbf{9. Differenz:} Seien M und N Mengen. Die Differenz ist definiert durch \textit{M$\textbackslash$ N := \{x | x $\in$ M und x $\notin$ N\}}
+    %%% TODO: this should be fancier! UND/ODER should have space befire and after.
+  \item [Schnitt:] 
+    Seien $M$ und $N$ Mengen. Der Schnitt ist Definiert als 
+    $M \cap N := {x | x \in M und x \in N}$
 
-\textbf{10. Mengenfamilie:} Die Mengenfamilie $\mathcal{F}$ sei definiert als $\mathcal{F} \subseteq \mathcal{P}(M)$\\
-Dann ist die Vereinigung aller Mengen aus $\mathcal{F}$:\\
-$\bigcup\mathcal{F}$ = \{x | $\exists$ N $\in$ $\mathcal{P}$(M) : (N $\in$ $\mathcal{F} \wedge x \in N$)\}\\
-Der Durchschnitt aller Mengen aus $\mathcal{F}:\\ \bigcap \mathcal{F} = \{x | \forall N \in \mathcal{P}(M) : (N \in \mathcal{F} \rightarrow x \in N)\} \cap \bigcup \mathcal{F}$ 
+  \item [Differenz:] 
+    Seien $M$ und $N$ Mengen. Die Differenz ist definiert durch 
+    $M | N := {x | x \in M und x \notin N}$
 
-\textbf{11. kartesisches Produkt:} Seien \textit{A} und \textit{B} Mengen.\\
-Das \textbf{kartesische Produkt} (auch Kreuzprodukt) von \textit{A} und \textit{B} ist definiert durch\\
-\textit{A $\times$ B := \{(a,b) | a $\in$ A und b $\in$ B\}}
+  \item [Mengenfamilie:] 
+    Die Mengenfamilie $\mathcal{F}$ sei definiert als 
+    $\mathcal{F} \subseteq \mathcal{P}(M)$ \\
+    Dann ist die Vereinigung aller Mengen aus $\mathcal{F}$:\\
+    $\bigcup\mathcal{F} = {x | \exists N \in \mathcal{P}(M) : (N \in \mathcal{F} \wedge x \in N)}$ \\
+    Der Durchschnitt aller Mengen aus $\mathcal{F}$: \\ 
+    $\bigcap \mathcal{F} = {x | \forall N \in \mathcal{P}(M) : (N \in \mathcal{F} \rightarrow x \in N)} \cap \bigcup \mathcal{F}$ 
 
-\textbf{12. Isomorphie:} Zwei Mengen \textit{X} und \textit{Y} sind \textbf{isomorph}, wenn dich ihre Elemente eins zu eins zuordnen lassen. \textit{(X $\cong$ Y)}
+  \item [kartesisches Produkt:] 
+    Seien $A$ und $B$ Mengen.\\
+    Das \textbf{kartesische Produkt} (auch Kreuzprodukt) von $A$ und $B$ ist 
+    definiert durch\\
+    $A \times B := {(a,b) | a \in A und b \in B}$
 
-\textbf{13. Disjunkte Vereinigung:} Die \textbf{disjunkte Vereinigung} von \textit{A} und \textit{B} ist definiert durch:\\
-\textit{A $\uplus$ B := (A $\times$ \{0\}) $\cup$ (B $\times$ \{1\})}
+  \item [Isomorphie:] 
+    Zwei Mengen $X$ und $Y$ sind \textbf{isomorph}, wenn dich ihre Elemente eins
+    zu eins zuordnen lassen. $(X \cong Y)$
 
+  \item [Disjunkte Vereinigung:] 
+    Die \textbf{disjunkte Vereinigung} von $A$ und $B$ ist definiert durch: \\
+    $A \uplus B := (A \times {0}) \cup (B \times {1})$
+\end{description}
 
-
-\vspace{3cm}
   
-\section*{Rechengesetze}
-\begin{equation}
-\textbf{Assoziativgesetz:}
-\begin{aligned}
-(A \cup B) \cup C = A \cup (B \cup C) \\
-(A \cap B) \cap C = A \cap (B \cap C) \notag
-\end{aligned}
-\end{equation}
+\subsection*{Rechengesetze}
+\begin{tabular} {l | l}
+  \textbf{Assoziativgesetz:} & 
+  \parbox{4.5cm}{\begin{equation*}
+    \begin{aligned}
+      (A \cup B) \cup C = A \cup (B \cup C) \\
+      (A \cap B) \cap C = A \cap (B \cap C)
+    \end{aligned}
+  \end{equation*}}
+  \\
+  \textbf{Kommutativgesetz:} & 
+  \parbox{3cm}{\begin{equation*}
+    \begin{aligned}
+      A \cup B = B \cup A \\
+      A \cap B = B \cap A
+    \end{aligned}
+  \end{equation*}}
+  \\
+  \textbf{Distributivgesetz:} & 
+  \parbox{5.5cm}{\begin{equation*}
+    \begin{aligned}
+      (A \cup B) \cap C = (A \cap C) \cup (B \cap C) \\
+      (A \cap B) \cup C = (A \cup C) \cap (B \cup C)
+    \end{aligned}
+  \end{equation*}}
+  \\
+  \textbf{De-Morgan:} & 
+  \parbox{4.5cm}{\begin{equation*}
+    \begin{aligned}
+      A | (B \cup C) = (A | B) \cap (A | C) \\
+      A | (B \cap C) = (A | B) \cup (A | C)
+    \end{aligned}
+  \end{equation*}}
+  \\
+  \textbf{Absorption:} & 
+  \parbox{3cm}{\begin{equation*}
+    \begin{aligned}
+      A \cap (A \cup B) = A \\
+      A \cup (A \cap B) = A
+    \end{aligned}
+  \end{equation*}}
+  \\
+  \textbf{Idempotenz:} & 
+  \parbox{3cm}{\begin{equation*}
+    \begin{aligned}
+      A \cap A = A \\
+      A \cup A = A
+    \end{aligned}
+  \end{equation*}}
+  \\
+  \textbf{Komplementgesetze:} & 
+  \parbox{3cm}{\begin{equation*}
+    \begin{aligned}
+      A \cap \bar{A} = \emptyset \\
+      A \cup \bar{A} = G
+    \end{aligned}
+  \end{equation*}}
+\end{tabular}
 
-\begin{equation}
-\textbf{Kommutativgesetz:}
-\begin{aligned}
-A \cup B = B \cup A \\
-A \cap B = B \cap A \notag
-\end{aligned}
-\end{equation}
+\begin{framed} [Zahlenmengen]
+  \begin{description}
+    \item [natürliche Zahlen:] $\mathbb{N} = {0,1,2,\dots}$
+    \item [ganze Zahlen:] $\mathbb{Z} = {0,-1,1,-2,2,\dots}$
+    \item [rationale Zahlen:] $\mathbb{Q} = {\frac{m}{n} | m \in \mathbb{Z}, n \in \mathbb{N}, n \neq 0}$
+    \item [reelle Zahlen:] $\mathbb{R}$
+    \item [irrationale Zahlen:] $\mathbb{R}\backslash \mathbb{Q}$
+    \item [komplexe Zahlen:] $\mathbb{C}$
+    \item [Dabei gilt:] $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C}$
+  \end{description}
+\end{framed}
 
-\begin{equation}
-\textbf{Distributivgesetz:}
-\begin{aligned}
-(A \cup B) \cap C = (A \cap C) \cup (B \cap C) \\
-(A \cap B) \cup C = (A \cup C) \cap (B \cup C) \notag
-\end{aligned}
-\end{equation}
+\vspace{-.6cm}
 
-\begin{equation}
-\textbf{De-Morgan:}
-\begin{aligned}
-A \textbackslash (B \cup C) = (A \textbackslash B) \cap (A \textbackslash C) \\
-A \textbackslash (B \cap C) = (A \textbackslash B) \cup (A \textbackslash C) \notag
-\end{aligned}
-\end{equation}
+\begin{framed} [Schreibweisen Mengen]
+  \begin{description}
+    \item [explizit:] $M = {1,2,3,4}$
+    \item [verbal:] \dq{}Die Menge aller nicht-negativen, geraden Ganzzahlen\dq{}
+    \item [unendliche Mengen:] $M := {0,2,4,6,8,\dots}$
+    \item [implizit:] $M := {x \in \mathbb{N} | x ist gerade}$
+  \end{description}
+\end{framed}
 
-\begin{equation}
-\textbf{Absorption:}
-\begin{aligned}
-A \cap (A \cup B) = A \\
-A \cup (A \cap B) = A \notag
-\end{aligned}
-\end{equation}
+\vspace{-.6cm}
 
-\begin{equation}
-\textbf{Idempotenz:}
-\begin{aligned}
-A \cap A = A \\
-A \cup A = A \notag
-\end{aligned}
-\end{equation}
+\begin{framed} [Potenzmenge:] 
+  Jede mögliche Teilmenge einer Menge. Bsp: $M := {1,2,3}$ dann ist
+  $\mathcal{P}(M) := {\emptyset},{1},{2},{3},{1,2},{1,3},{2,3},{1,2,3}$.
+\end{framed}
 
-\begin{equation}
-\textbf{Komplementgesetze:}
-\begin{aligned}
-A \cap \bar{A} = \emptyset \\
-A \cup \bar{A} = G \notag
-\end{aligned}
-\end{equation}
+\vspace{-.6cm}
 
-\vspace{-0.5cm}
-
-\section*{Zahlenmengen}
-\vspace{-0.3cm}
-\textbf{natürliche Zahlen $\mathbb{N}$} = \{0,1,2,$\dots$\}\\
-\textbf{ganze Zahlen $\mathbb{Z}$} = \{0,-1,1,-2,2,$\dots$\}\\
-\textbf{rationale Zahlen $\mathbb{Q}$} = \{$\frac{m}{n}$ | m $\in \mathbb{Z}$ , n $\in \mathbb{N}$, n $\neq$ 0\}\\
-\textbf{reelle Zahlen $\mathbb{R}$}\\
-\textbf{irrationale Zahlen $\mathbb{R}\backslash\mathbb{Q}$ }\\
-\textbf{komplexe Zahlen $\mathbb{C}$}\\
-
-Dabei gilt: $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R} \subseteq \mathbb{C} \subseteq$
-
-\section*{Schreibweisen Mengen:}
-\vspace{-0.3cm}
-Mengen können durch mehrere Schreibweisen beschrieben werden:\\
-\textbf{explizit:} M = \{1,2,3,4\}\\
-\textbf{verbal:} \glqq Die Menge aller nicht-negativen, geraden Ganzzahlen\grqq\\
-\textbf{unendliche Mengen:} M := \{0,2,4,6,8,$\dots$\}\\
-\textbf{implizit:} M := \{x $\in \mathbb{N}$ | x ist gerade\}\\
-
-Eine \textbf{Potenzmenge} ist jede mögliche Teilmenge einer Menge. Bsp: M := \{1,2,3\} dann ist \\
-$\mathcal{P}$(M) := \{\{$\emptyset$\},\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},\{1,2,3\}\}.\\
-
-Bei der \textbf{disjunkten Vereinigung} zweier Mengen kreuzt man die jeweiligen Elemente mit einer Menge aus einem Index (Menge A $\times$ \{1\}, Menge B $\times$ \{2\} usw.) und vereinigt die daraus resultierenden Kreuzprodukte. Dadurch ist jedem Element aus A $\uplus$ B anzusehen, ob es aus A oder B stammt.\\
+\begin{framed} [disjunkten Vereinigung:] 
+    Bei der disjunkten Vereinigung zweier Mengen kreuzt man die jeweiligen 
+    Elemente mit einer Menge aus einem Index ($A \times {1}$, $B \times {2}$ usw.) 
+    und vereinigt die daraus resultierenden Kreuzprodukte. 
+    Dadurch ist jedem Element aus $A \uplus B$ anzusehen, ob es aus $A$ oder $B$ 
+    stammt.
+\end{framed}

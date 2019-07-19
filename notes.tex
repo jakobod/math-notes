@@ -1,11 +1,13 @@
 \documentclass[10pt]{extarticle}
 \usepackage{multicol, caption}
+\usepackage[ngerman]{babel}
 \usepackage{import}
 \usepackage[a4paper, left=0.3cm, right=0.3cm, top=0.3cm, bottom=1.5cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[framemethod=TikZ]{mdframed}
 \usepackage{fancyhdr}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{enumitem}
 \usepackage{graphicx}
 \renewcommand{\familydefault}{\sfdefault}
@@ -36,37 +38,36 @@
 
 \begin{document}
 
-\begin{multicols}{2}
+  \begin{multicols}{2}
 
-\import{sections/}{chapter_1.tex}
+    \import{sections/}{chapter_1.tex}
+    \newpage
 
-\section*{Kapitel 2}
-%\import{sections/}{chapter_2.tex}
+    \import{sections/}{chapter_2.tex}
 
-\section*{Kapitel 3}
-%\import{sections/}{chapter_3.tex}
+    \section*{Kapitel 3}
+    %\import{sections/}{chapter_3.tex}
 
-\section*{Kapitel 4a}
-%\import{sections/}{chapter_4a.tex}
+    \section*{Kapitel 4a}
+    %\import{sections/}{chapter_4a.tex}
 
-\section*{Kapitel 4b}
-%\import{sections/}{chapter_4b.tex}
+    \section*{Kapitel 4b}
+    %\import{sections/}{chapter_4b.tex}
 
-\section*{Kapitel 5}
-%\import{sections/}{chapter_5.tex}
+    \section*{Kapitel 5}
+    %\import{sections/}{chapter_5.tex}
 
-\section*{Kapitel 6}
-%\import{sections/}{chapter_6.tex}
+    \section*{Kapitel 6}
+    %\import{sections/}{chapter_6.tex}
 
-\section*{Kapitel 7}
-%\import{sections/}{chapter_7.tex}
+    \section*{Kapitel 7}
+    %\import{sections/}{chapter_7.tex}
 
-\section*{Kapitel 8}
-%\import{sections/}{chapter_8.tex}
+    \section*{Kapitel 8}
+    %\import{sections/}{chapter_8.tex}
 
-\section*{Kapitel 9}
-%\import{sections/}{chapter_9.tex}
+    \section*{Kapitel 9}
+    %\import{sections/}{chapter_9.tex}
 
-\end{multicols}
-
+  \end{multicols}
 \end{document}
