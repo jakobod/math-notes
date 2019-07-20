@@ -10,7 +10,16 @@
 \usepackage{amssymb}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{fourier} 
+\usepackage{array}
+\usepackage{makecell}
 \renewcommand{\familydefault}{\sfdefault}
+
+% for typesetting cells in tabulars
+\renewcommand\theadalign{lc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
 
 \newenvironment{framed}[1][]{%
     \begin{mdframed}[%
