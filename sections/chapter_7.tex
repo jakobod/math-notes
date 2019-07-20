@@ -1,35 +1,54 @@
-%\small %oder \tiny oder \scriptsize oder \footnotesize oder \small ...
-\section*{Definitionen}
-\textbf{1. Permutation:} Eine Anordnung aller Elemente einer endlichen Menge hei�t Permutation.\\
-\textbf{Ausf�hrlicher:} Eine bijektive Abbildung einer endlichen Menge $M$ auf sich selbst nennt man Permutation der Menge.\\
-Es gibt also $|M|!$ Permutationen von $M$.\\
-Die Menge aller Permutationen der Menge $\{1,\dots,n\}$ bezeichnen eir mit $S_n$. Es gilt somit $|S_n| = n!$.
+\subsection*{Definitionen}
+\begin{description}
+  \item [Permutation:]
+    Eine Anordnung aller Elemente einer endlichen Menge heißt Permutation.\\
+    \textbf{Ausführlicher:} Eine bijektive Abbildung einer endlichen Menge $M$ 
+    auf sich selbst nennt man Permutation der Menge.\\
+    Es gibt also $|M|!$ Permutationen von $M$.\\
+    Die Menge aller Permutationen der Menge $\{1,\dots,n\}$ bezeichnen wir mit 
+    $S_n$. Es gilt somit $|S_n| = n!$.
 
-\textbf{2. $k$-Permutation:} Eine $k$-Permutation einer endlichen Menge $S$ ist eine Permutation einer $k$-elementigen Teilmenge von $S$.\\
-Die Anzahl aller $k$-Permutationen einer $n$-elementigen Menge wird mit $[\frac{n}{k}]$ bezeichnet. (auch: $(n)_k$)\\
-Die Anzahl der $k$-elementigen Teilmenge einer $n$-elementigen Menge wird mit $(\frac{n}{k})$ bezeichnet. Dies ist der Binomialkoeffizient gesprochen \glqq $n$ �ber $k$\grqq\\
-$(\frac{n}{k})$ kann auch als $\frac{n!}{k! \cdot (n - k)}$ dargestellt werden.\\
-\textbf{Beispiel:}\\
-Sei $S = \{1,2,3\}$ \\
-Die 2-Permutation von $S$ ist also:\\
-$(1,2), (2,1), (1,3), (3,1), (2,3), (3,2)$\\
-Der Binomialkoeffizient hier ist: $(\frac{n}{k}) = (\frac{3}{2}) = 3$
+  \item [$k$-Permutation:]
+    Eine $k$-Permutation einer endlichen Menge $S$ ist eine Permutation einer 
+    $k$-elementigen Teilmenge von $S$.\\
+    Die Anzahl aller $k$-Permutationen einer $n$-elementigen Menge wird mit 
+    $[\frac{n}{k}]$ bezeichnet. (auch: $(n)_k$)\\
+    Die Anzahl der $k$-elementigen Teilmenge einer $n$-elementigen Menge wird
+    mit $(\frac{n}{k})$ bezeichnet. Dies ist der Binomialkoeffizient gesprochen
+    \glqq{}$n$ über $k$\grqq{}\\
+    $(\frac{n}{k})$ kann auch als $\frac{n!}{k! \cdot (n - k)}$ dargestellt 
+    werden.\\
+    \textbf{Beispiel:}\\
+    Sei $S = \{1,2,3\}$ \\
+    Die 2-Permutation von $S$ ist also:\\
+    $(1,2), (2,1), (1,3), (3,1), (2,3), (3,2)$\\
+    Der Binomialkoeffizient hier ist: $(\frac{n}{k}) = (\frac{3}{2}) = 3$
 
-\textbf{3. Begriffserkl�rungen Wahrscheinlichkeitstheorie:}
-\begin{itemize}
-  \item Der Ereignisraum $\Omega := \{\omega_1,\omega_2,\dots,\omega_n\}$. Hier: endlich und diskret.
-  \item Die Menge der Ereignisse $\mathcal{A} = \mathcal{P}(\Omega)$, also die Potenzmenge von $\Omega$.
-  \item Das Wahrscheinlichkeitsma� $P : \mathcal{P}(\Omega) \rightarrow \mathbb{R}$ ordnet jedem Ereignis $A \in \mathcal{P}(\Omega)$ seine Wahrscheinlichkeit $P(A)$ zu.
-  \item Ein Laplace-Versuch ist ein Zufallsversuch mit endlich vielen und gleich wahrscheinlichen Ergebnissen. Beispiel: M�nzwurf, W�rfel
-  \item Bei Laplace-Versuchen wird das Wahrscheinlichkeitsma� durch eine Abz�hlregel definiert (Ereignis $A \in \mathcal{P}(\Omega)$):
-  \begin{center}
-    $P(A) = \frac{|A|}{|\Omega|}$
-  \end{center}
-  Also: P(A) ist das Verh�ltnis von der Anzahl der (f�r $A$) g�nstigen F�lle und der Anzahl aller insgesamt m�glichen F�lle.
-  \item Man ben�tigt kombinatorische Prinzipien, um |A| zu bestimmen.
-\end{itemize}
+  \item [Begriffserklärungen Wahrscheinlichkeitstheorie:]
+    \begin{itemize}
+      \item Der Ereignisraum $\Omega := \{\omega_1,\omega_2,\dots,\omega_n\}$. 
+            Hier: endlich und diskret.
+      \item Die Menge der Ereignisse $\mathcal{A} = \mathcal{P}(\Omega)$, also 
+            die Potenzmenge von $\Omega$.
+      \item Das Wahrscheinlichkeitsmaß 
+            $P : \mathcal{P}(\Omega) \rightarrow \mathbb{R}$ ordnet jedem 
+            Ereignis $A \in \mathcal{P}(\Omega)$ seine Wahrscheinlichkeit $P(A)$ 
+            zu.
+      \item Ein Laplace-Versuch ist ein Zufallsversuch mit endlich vielen und 
+            gleich wahrscheinlichen Ergebnissen. Beispiel: Münzwurf, Würfel
+      \item Bei Laplace-Versuchen wird das Wahrscheinlichkeitsmaß durch eine 
+            Abzählregel definiert (Ereignis $A \in \mathcal{P}(\Omega)$):
+            \begin{equation*}
+              P(A) = \frac{|A|}{|\Omega|}
+            \end{equation*}
+            Also: $P(A)$ ist das Verhältnis von der Anzahl der (für $A$) 
+            günstigen Fälle und der Anzahl aller insgesamt möglichen Fälle.
+      \item Man benötigt kombinatorische Prinzipien, um $|A|$ zu bestimmen.
+    \end{itemize}
 
-\textbf{Pascal'sche Gleichung:} $(\frac{n}{k}) = (\frac{n-1}{k-1})+(\frac{n-1}{k})$
+  \item [Pascal'sche Gleichung:]
+    $(\frac{n}{k}) = (\frac{n-1}{k-1})+(\frac{n-1}{k})$
+\end{description}
 
 %	\section*{Zusammenfassung}
 %	Um die Anzahl von Kombinationen von endlichen, verschiedenen Objekten zu berechnen, wird die Kombinatorik gebraucht. Dies wir z.B. in der \glqq Diskreten Wahrscheinlichkeitstheorie\grqq gebraucht.
