@@ -1,112 +1,146 @@
-\section*{Beweistechniken}
-\textbf{1. Direkter Beweis:} Wird bei wenn-dann-Aussagen genutzt. Modus ponens: Aus $p$ und $(p \Rightarrow q$) ergibt sich $s$.\\
-Vorgehen dabei ist:\\
-\begin{itemize}
-  \item Satz genau studieren--Welche Parameter werden gestellt?
-  \item Bei der Hypothese beginnen. Diese muss wahr sein, denn ($p \Rightarrow q$).
-  \item ggf. die Hypothese mathematisch darstellen Bsp:\\
-    gerade Zahl $n = 2k$\\
-    ungerade Zahl $n = 2k + 1$
-  \item Dann durch (beliebig viele) Folgeaussagen von der Hypothese zur Schlussfolgerung kommen.\\
-  $p \Rightarrow s_1, s_1 \Rightarrow s_2, s_2 \Rightarrow q$ wobei $s_1 - s_n$ wieder wahre Aussagen sind.
-  \item Praktisch dabei: Es muss nicht jeder Schritt aufgeschrieben werden--nur solche, die wichtig f�r die Beweisf�hrung des Lemma sind.
-\end{itemize}
+\begin{framed} [Direkter Beweis]
+  Wird bei wenn-dann-Aussagen genutzt. Modus ponens: Aus $p$ und 
+  $(p \Rightarrow q)$ ergibt sich $s$. Vorgehen dabei ist:
+  \begin{enumerate}
+    \item Satz genau studieren--Welche Parameter werden gestellt?
+    \item Bei der Hypothese beginnen. Diese muss wahr sein, denn 
+          $(p \Rightarrow q)$.
+    \item ggf. die Hypothese mathematisch darstellen Bsp:\\
+          gerade Zahl $n = 2k$\\
+          ungerade Zahl $n = 2k + 1$
+    \item Dann durch (beliebig viele) Folgeaussagen von der Hypothese zur 
+          Schlussfolgerung kommen.\\
+          $p \Rightarrow s_1, s_1 \Rightarrow s_2, s_2 \Rightarrow q$ wobei 
+          $s_1 - s_n$ wieder wahre Aussagen sind.
+    \item Praktisch dabei: Es muss nicht jeder Schritt aufgeschrieben werden--nur
+          solche, die wichtig für die Beweisführung des Lemma sind.
+  \end{enumerate}
 
-\textbf{Beispiel:}
-Satz: \glqq Die Summe von drei aufeinander folgenden nat�rlichen Zahlen ist durch drei teilbar.\grqq\\
-\textbf{Gegebene Informationen: $n \in \mathbb{N}$ und\\
-$p = n + (n+1) + (n+2)$ ist durch 3 teilbar}
-\begin{enumerate}
-  \item $n \in \mathbb{N} \Rightarrow (n+1) \in \mathbb{N}$
-  \item $\Rightarrow n + (n+1) + (n+2) = (3n + 3)$
-  \item $\Rightarrow (3n + 3) = 3(n + 1)$
-\end{enumerate}
-Damit ist der Satz bewiesen. $\square$
-\\
-\textbf{2. Kontraposition:} Ist dem Direkten Beweis sehr �hnlich. Nur dass hier die Behauptung negiert und umgekehrt wird um zu der �quivalenten Kontraposition zu gelangen. Aus ($p \Rightarrow q$) wird also ($\neg q \Rightarrow \neg p$). Man beweist also quasi r�ckw�rts.
+  \subsubsection*{Beispiel:}
+  \textbf{Satz:} \dq{}Die Summe von drei aufeinander folgenden natürlichen Zahlen 
+                ist durch drei teilbar.\dq{}\\
+  \textbf{Gegebene Informationen: $n \in \mathbb{N}$ und\\
+  $p = n + (n+1) + (n+2)$ ist durch 3 teilbar}
+  \begin{enumerate}
+    \item $n \in \mathbb{N} \Rightarrow (n+1) \in \mathbb{N}$
+    \item $\Rightarrow n + (n+1) + (n+2) = (3n + 3)$
+    \item $\Rightarrow (3n + 3) = 3(n + 1)$
+  \end{enumerate}
+  Damit ist der Satz bewiesen. $\square$
+\end{framed}
 
-\textbf{Beispiel:}
-Satz: \glqq Wenn $a^2$ eine ungerade Zahl ist, dann ist $a$ ungerade\grqq .\\
-Die �quivalente Kontraposition dazu ist:
-\glqq Wenn $a$ gerade, dann ist $a^2$ gerade\grqq.
-\begin{enumerate}
-  \item $\neg q$ = \glqq $a$ ist gerade\grqq
-  \item $a = 2 \cdot k$ (Def. gerade Zahl)
-  \item $a \cdot a = (2 \cdot k) \cdot a$ (mul. mit a)
-  \item $a^2 = 2 \cdot (k \cdot a)$ (Assoziativgesetz)
-  \item $a^2 = 2 \cdot k'$ (wobei $k' = a \cdot k$)
-  \item $\neg p = a^2 ist gerade$ (durch $2 \cdot k'$)
-\end{enumerate}
-Damit ist der Satz bewiesen. $\square$
-\\
-\textbf{3. Wiederspruch:} Basiert wieder auf der Implikation \\($p \Rightarrow q$). Hier wird aber ein Wiederspruch erzeugt sodass \\($p \wedge \neg q$)
 
-\textbf{Beispiel:}
-Satz: \glqq Wenn $a$ und $b$ gerade nat�rliche Zahlen sind, dann ist auch $a \cdot b$ gerade\grqq .
+\begin{framed} [Kontraposition]
+  Ist dem Direkten Beweis sehr ähnlich. Nur dass hier die Behauptung negiert und
+  umgekehrt wird um zu der äquivalenten Kontraposition zu gelangen. Aus 
+  $(p \Rightarrow q)$ wird also $(\neg q \Rightarrow \neg p)$. Man beweist also 
+  quasi rückwärts.
 
-\begin{enumerate}
-  \item Annahme: $a \cdot b$ ist ungerade.
-  \item $a \cdot b = 2 \cdot (a \cdot k)$ (denn: $b = 2 \cdot k$)
-  \item $a \cdot k$ ist gerade. Also muss $a \cdot b$ gerade sein.
-\end{enumerate}
-Damit ist der Satz bewiesen. $\square$
-\\
-\textbf{4. �quivalenzbeweis} Bei dieser Beweistechnik unterteilt man die Aussage in zwei direkte Beweise. Aus ($p \Leftrightarrow q$) wir dann ($p \Rightarrow q$) und ($q \Rightarrow p$).
+  \subsubsection*{Beispiel:}
+  \textbf{Satz:} \dq{}Wenn $a^2$ eine ungerade Zahl ist, dann ist $a$ ungerade\dq{}.\\
+  Die äquivalente Kontraposition dazu ist:
+  \dq{}Wenn $a$ gerade, dann ist $a^2$ gerade\dq{}.
+  \begin{enumerate}
+    \item $\neg q =$ \glqq $a$ ist gerade\grqq
+    \item $a = 2 \cdot k$ (Def. gerade Zahl)
+    \item $a \cdot a = (2 \cdot k) \cdot a$ (mul. mit a)
+    \item $a^2 = 2 \cdot (k \cdot a)$ (Assoziativgesetz)
+    \item $a^2 = 2 \cdot k'$ (wobei $k' = a \cdot k$)
+    \item $\neg p = a^2$ ist gerade (durch $2 \cdot k'$)
+  \end{enumerate}
+  Damit ist der Satz bewiesen. $\square$
+\end{framed}
 
-\textbf{Beispiel:}
-Satz: \glqq $a$ ist gerade genau dann, wenn $a^2$ gerade ist\grqq.\\
-Dabei ist $p$  \glqq$a$ ist gerade\grqq\space und\\
-$q$ = \glqq$a^2$ ist gerade\grqq\\
-In diesem Fall ist ($p \Rightarrow q$) schon bewiesen. (siehe Bsp. Kontraposition)\\
-($q \Rightarrow p$) wird durch Kontraposition bewiesen:
-\begin{enumerate}
-  \item $\neg p$: \glqq $a$ ist ungerade\grqq
-  \item $a - 1 = 2 \cdot k$ (def. ungerade Zahl umgestellt)
-  \item $a = 2 \cdot k + 1$
-  \item $a^2 = (2 \cdot k)^2 + 2 \cdot (2 \cdot k) + 1$ (quadrat schon ausmul.)
-  \item $a^2 = 2 \cdot (2 \cdot k \cdot k + 2 \cdot k) + 1$
-  \item $a^2 ist ungerade$
-\end{enumerate}
-Da nun sowohl ($p \Rightarrow q$) als auch ($q \Rightarrow p$) bewiesen ist, ist der �quivalenzbeweis erbracht. $\square$
-\\	
-\textbf{5. Fallunterscheidung:} Jede Aussage $p$ ist logisch �quivalent zu ($q \Rightarrow p$) $\wedge$ ($\neg q \Rightarrow p$). Dann Beweist man einfach beide F�lle.
 
-\textbf{Beispiel:}
-Satz: \glqq Jede nat�rliche Zahl $n^2$ geteilt durch 4 l�sst entweder den Rest $1$ oder $0$\grqq .
-\begin{description}
-  \item[$n$ ist gerade]\hfill
-  \begin{itemize}
-    \item $n = 2m f�r m \in \mathbb{M}$
-    \item $n^2 = 4m^2$
-    \item $n^2 ist durch 4 teilbar$
-    \item Rest ist $0$
-    \item Rest ist $1$ oder $0$
-  \end{itemize}
-  \item[$n$ ist ungerade]\hfill
-  \begin{itemize}
-    \item $n = 2m + 1 f�r m \in \mathbb{M}$
-    \item $n^2 = 4m^2 + 4m + 1 = 4(m^2 + m) + 1$
-    \item $n^2 ist durch 4 teilbar mit Rest 1$
-    \item Rest ist $1$
-    \item Rest ist $1$ oder $0$
-  \end{itemize}
-\end{description}
-Damit sind alle F�lle betrachtet und die Aussage bewiesen. $\square$
-\\
-\textbf{6. Beweis mit Quantoren:} Bei universellen Aussagen ($\forall x$) muss man unabh�ngig von konkreten Werten f�r die Quantifizierten Variablen Beweisen. Deswegen beginnt und beendet man den Beweis etwas anders:\\
-Bei der Aussage $\forall x : (p(x) \Rightarrow q(x))$ w�rde man so vorgehen:
-\begin{enumerate}
-  \item Sei $a$ ein beliebiger, aber fester Wert aus dem Universum (also der Menge).
-  \item <Beweis>
-  \item Da $a$ beliebig gew�hlt werden kann, folgt \\$\forall x : (p(x) \Rightarrow q(x))$.
-\end{enumerate}
-Damit ist die Aussage Bewiesen $\square$
-\\
+\begin{framed} [Wiederspruch]
+  Basiert wieder auf der Implikation ($p \Rightarrow q$). Hier wird aber ein 
+  Wiederspruch erzeugt sodass $(p \wedge \neg q)$
+
+  \subsubsection*{Beispiel:}
+  \textbf{Satz:} \dq{}Wenn $a$ und $b$ gerade natürliche Zahlen sind, dann ist
+  auch $a \cdot b$ gerade\dq{}.
+  \begin{enumerate}
+    \item Annahme: $a \cdot b$ ist ungerade.
+    \item $a \cdot b = 2 \cdot (a \cdot k)$ (denn: $b = 2 \cdot k$)
+    \item $a \cdot k$ ist gerade. Also muss $a \cdot b$ gerade sein.
+  \end{enumerate}
+  Damit ist der Satz bewiesen. $\square$
+\end{framed}
+
+
+\begin{framed} [Äquivalenzbeweis]
+  Bei dieser Beweistechnik unterteilt man die Aussage in zwei direkte Beweise. Aus
+  $(p \Leftrightarrow q)$ wir dann $(p \Rightarrow q)$ und $(q \Rightarrow p)$.
+
+  \subsubsection*{Beispiel:}
+  \textbf{Satz:} \dq{}$a$ ist gerade genau dann, wenn $a^2$ gerade ist\dq{}.\\
+  Dabei ist $p = $\dq{}$a$ ist gerade\dq{} und $q = \dq{}a^2$ ist gerade\dq{}\\
+  In diesem Fall ist $(p \Rightarrow q)$ schon bewiesen. (siehe Bsp. Kontraposition)\\
+  $(q \Rightarrow p)$ wird durch Kontraposition bewiesen:
+  \begin{enumerate}
+    \item $\neg p$: \glqq $a$ ist ungerade\grqq
+    \item $a - 1 = 2 \cdot k$ (def. ungerade Zahl umgestellt)
+    \item $a = 2 \cdot k + 1$
+    \item $a^2 = (2 \cdot k)^2 + 2 \cdot (2 \cdot k) + 1$ (quadrat schon ausmul.)
+    \item $a^2 = 2 \cdot (2 \cdot k \cdot k + 2 \cdot k) + 1$
+    \item $a^2$ ist ungerade
+  \end{enumerate}
+  Da nun sowohl ($p \Rightarrow q$) als auch ($q \Rightarrow p$) bewiesen ist, ist
+  der Äquivalenzbeweis erbracht. $\square$
+\end{framed}
+
+
+\begin{framed} [Fallunterscheidung]
+  Jede Aussage $p$ ist logisch äquivalent zu 
+  $(q \Rightarrow p) \wedge (\neg q \Rightarrow p)$. Dann Beweist man einfach
+  beide Fälle.
+
+  \subsubsection*{Beispiel:}
+  \textbf{Satz:} \dq{}Jede natürliche Zahl $n^2$ geteilt durch 4 lässt entweder
+  den Rest $1$ oder $0$\dq{}.
+  \begin{description}
+    \item [$n$ ist gerade:] \hfill
+      \begin{itemize}
+        \item $n = 2m$ für $m \in \mathbb{M}$
+        \item $n^2 = 4m^2$
+        \item $n^2$ ist durch $4$ teilbar
+        \item Rest ist $0$
+        \item Rest ist $1$ oder $0$
+      \end{itemize}
+    \item [$n$ ist ungerade:] \hfill
+      \begin{itemize}
+        \item $n = 2m + 1$ für $m \in \mathbb{M}$
+        \item $n^2 = 4m^2 + 4m + 1 = 4(m^2 + m) + 1$
+        \item $n^2$ ist durch $4$ teilbar mit Rest $1$
+        \item Rest ist $1$
+        \item Rest ist $1$ oder $0$
+      \end{itemize}
+  \end{description}
+  Damit sind alle Fälle betrachtet und die Aussage bewiesen. $\square$
+\end{framed}
+
+
+\begin{framed} [Beweis mit Quantoren]
+  Bei universellen Aussagen ($\forall x$) muss man unabhängig von konkreten 
+  Werten für die Quantifizierten Variablen Beweisen. Deswegen beginnt und 
+  beendet man den Beweis etwas anders:\\
+  Bei der Aussage $\forall x : (p(x) \Rightarrow q(x))$ würde man so vorgehen:
+  \begin{enumerate}
+    \item Sei $a$ ein beliebiger, aber fester Wert aus dem Universum 
+          (also der Menge).
+    \item <Beweis>
+    \item Da $a$ beliebig gewählt werden kann, folgt:\\
+          $\forall x : (p(x) \Rightarrow q(x))$.
+  \end{enumerate}
+  Damit ist die Aussage Bewiesen $\square$
+\end{framed}
+
+
 Bei existenziellen Aussagen $\exists x : (p(x) \Rightarrow q(x))$
 geht man so vor:
 \begin{enumerate}
   \item Sei $a$ = <Ein geeignetes Element aus dem Universum>.
   \item <Beweis>
   \item Damit ist die Existenz eines $a$ mit der Eigenschaft ($p(x) \Rightarrow q(x)$) bewiesen. 
-  \item Damit ist die G�ltigkeit der Aussage $\exists x : (p(x) \Rightarrow q(x))$ bewiesen.
+  \item Damit ist die Gültigkeit der Aussage $\exists x : (p(x) \Rightarrow q(x))$ bewiesen.
 \end{enumerate}
