@@ -1,48 +1,87 @@
 
-\section*{Definitionen}
-\textbf{1. Gruppe:} Eine Menge ($\mathbb{G},\cdot, 1$) mit der Operation $\cdot$ und dem Element 1 ist eine Gruppe, wenn gilt:
-\begin{itemize}
-  \setlength{\itemsep}{-0.4cm}
-  \item $(x \cdot y) \cdot z = x \cdot (y \cdot z)$ \textbf{Assoziativit�t}\\
-  \item $x \cdot 1 = x$ \textbf{Neutralit�t der 1}\\
-  \item $x \cdot x^{-1} = 1$ \textbf{Existenz von inversen $x^{-1}$ f�r $x \neq 0$}
-\end{itemize}
-Dabei hei�t eine Gruppe kommutativ, wenn zus�tzlich gilt:\\
-$x \cdot y = y \cdot x$ \textbf{Kommutativit�t}
+\subsection*{Definitionen}
+\begin{description}  
+  \item [Gruppe:] 
+    Eine Menge ($\mathbb{G},\cdot, 1$) mit der Operation $\cdot$ und dem Element
+    1 ist eine Gruppe, wenn gilt:
+    \begin{itemize}
+      \item $(x \cdot y) \cdot z = x \cdot (y \cdot z)$ \textbf{Assoziativität}
+      \item $x \cdot 1 = x$ \textbf{Neutralität der 1}
+      \item $x \cdot x^{-1} = 1$ \textbf{Existenz von inversen $x^{-1}$ für 
+            $x \neq 0$}
+    \end{itemize}
+    Dabei heißt eine Gruppe kommutativ, wenn zusätzlich gilt:\\
+    $x \cdot y = y \cdot x$ \textbf{Kommutativität}
 
-\textbf{2. Halbgruppe:} Eine Halbgruppe ist eine Verallgemeinerung einer Gruppe, der die Assoziativit�t gen�gt.
+  \item [Halbgruppe:]
+    Eine Halbgruppe ist eine Verallgemeinerung einer Gruppe, der die 
+    Assoziativität genügt.
 
-\textbf{3. K�rper:} Ein K�rper ($\mathbb{K}, +, 0, \cdot, 1$) ist eine Menge $\mathbb{K}$, welche mit zwei zweistelligen Verkn�pfungen versehen ist und folgende Eigenschaften besitzt:
-\begin{itemize}
-  \item ($\mathbb{K}, +, 0$) ist eine kommutative Gruppe, wobei 0 das neutrale Element der Addition ist.
-  \item ($\mathbb{K}\backslash \{0\}, \cdot, 1$) ist eine kommutative Gruppe, wobei 1 das neutrale Element der Multiplikation ist.
-  \item Des weiteren gilt das Distributivgesetz:
-  $x(y + z) = xy + xz$
-\end{itemize}
+  \item [Körper:]
+    Ein Körper ($\mathbb{K}, +, 0, \cdot, 1$) ist eine Menge $\mathbb{K}$, 
+    welche mit zwei zweistelligen Verknüpfungen versehen ist und folgende 
+    Eigenschaften besitzt:
+    \begin{itemize}
+      \item ($\mathbb{K}, +, 0$) ist eine kommutative Gruppe, wobei 0 das
+            neutrale Element der Addition ist.
+      \item ($\mathbb{K}\backslash \{0\}, \cdot, 1$) ist eine kommutative 
+            Gruppe, wobei 1 das neutrale Element der Multiplikation ist.
+      \item Des weiteren gilt das Distributivgesetz:
+            $x(y + z) = xy + xz$
+    \end{itemize}
 
-\textbf{4. Ring:} Ein Ring ($\mathbb{P}, +, 0, \cdot, 1$) besitzt folgende Eigenschaften:
-\begin{itemize}
-  \item ($\mathbb{P}, +, 0$) ist eine Gruppe.
-  \item ($\mathbb{P}\backslash\{0\}, \cdot, 1$) ist eine Halbgruppe.
-  \item Es gelten die Distributivgesetze.
-\end{itemize}
-Ein Ring hei�t kommutativ, wenn die Addition kommutativ ist. ($\mathbb{P}, +, 0$) also eine kommutative Gruppe ist.
+  \item [Ring:]
+    Ein Ring ($\mathbb{P}, +, 0, \cdot, 1$) besitzt folgende Eigenschaften:
+    \begin{itemize}
+      \item ($\mathbb{P}, +, 0$) ist eine Gruppe.
+      \item ($\mathbb{P}\backslash\{0\}, \cdot, 1$) ist eine Halbgruppe.
+      \item Es gelten die Distributivgesetze.
+    \end{itemize}
+    Ein Ring heißt kommutativ, wenn die Addition kommutativ ist. 
+    ($\mathbb{P}, +, 0$) also eine kommutative Gruppe ist.
 
-\textbf{5. Unit�rer Ring:} Ein unit�rer Ring besitzt ein multiplikativ neutrales Element. ($\rightarrow$ 1)
+  \item [Unitärer Ring:]
+    Ein unitärer Ring besitzt ein multiplikativ neutrales Element. 
+    ($\rightarrow$ 1)
 
-\textbf{6. komplexe Zahl:} Eine Komplexe Zahl $z$ ist definiert als $z = a + b\cdot i$ mit $a,b \in \mathbb{R}$.\\
-Dabei ist $a$ der Realteil und $b$ der Imagin�rteil von $z$.
+  \item [Komplexe Zahl:] 
+    Eine Komplexe Zahl $z$ ist definiert als $z = a + b\cdot i$ mit 
+    $a,b \in \mathbb{R}$.\\
+    Dabei ist $a$ der Realteil und $b$ der Imaginärteil von $z$.
 
-\textbf{7. Exponentialdarstellung:} Eine komplexe Zahl l�sst sich auch mit Hilfe der komplexen $e$-Funktion darstellen:\\
-$z = r \cdot e^{i\phi} = r \cdot (cos(\phi) + i \cdot sin(\phi))$\\
-Dabei ist \\
-$sin(\phi) = Im(z)$\\
-$cos(\phi) = Re(z)$
+  \item [Exponentialdarstellung:]
+    Eine komplexe Zahl lässt sich auch mit Hilfe der komplexen $e$-Funktion 
+    darstellen:
+    \begin{equation*}
+      z = r \cdot e^{i\phi} = r \cdot (cos(\phi) + i \cdot sin(\phi))
+    \end{equation*}
+    Dabei ist
+    \begin{equation*}
+      \begin{aligned}
+        sin(\phi) &= Im(z)\\
+        cos(\phi) &= Re(z)
+      \end{aligned}
+    \end{equation*}
+\end{description}
 
-\section*{Rechengesetze Imagin�re Zahlen}
-\textbf{Addition:} $(a + bi) + (c + di) = (a + c) + (b + d)i$\\\\
-\textbf{Subtraktion:} $(a + bi) - (c + di) = (a - c) + (b - d)i$\\\\
-\textbf{Betrag Exponentialform:} $r = \sqrt{|a|^2 + |b|^2}$\\\\
-\textbf{Winkel Exponentialform:} $\phi = arctan(\frac{Im}{Re})$\\\\
-\textbf{Multiplikation:} $(r_1 \cdot e^{i\phi_1}) \cdot (r_2 \cdot e^{i\phi_2}) = r_1 \cdot r_2 \cdot e^{i(\phi_1+\phi_2)}$\\\\
-\textbf{Disvision:} $\frac{r_1 \cdot e^{i\phi_1}}{r_2 \cdot e^{i\phi_2}} = \frac{r_1}{r_2} \cdot e^{i(\phi_1-\phi_2)}$
+\begin{framed} [Rechengesetze Imaginäre Zahlen]
+  \begin{description}
+    \item [Addition:]
+      $(a + bi) + (c + di) = (a + c) + (b + d)i$
+
+    \item [Subtraktion:]
+      $(a + bi) - (c + di) = (a - c) + (b - d)i$
+
+    \item [Betrag Exponentialform:]
+      $r = \sqrt{|a|^2 + |b|^2}$
+
+    \item [Winkel Exponentialform:]
+      $\phi = arctan(\frac{Im}{Re})$
+
+    \item  [Multiplikation:]
+      $(r_1 \cdot e^{i\phi_1}) \cdot (r_2 \cdot e^{i\phi_2}) = r_1 \cdot r_2 \cdot e^{i(\phi_1+\phi_2)}$
+    
+    \item [Disvision:]
+      $\frac{r_1 \cdot e^{i\phi_1}}{r_2 \cdot e^{i\phi_2}} = \frac{r_1}{r_2} \cdot e^{i(\phi_1-\phi_2)}$
+  \end{description}
+\end{framed}
