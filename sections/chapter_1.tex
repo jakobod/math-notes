@@ -99,7 +99,7 @@
 \begin{tabular}{l l l}
   \begin{tabular}{ | c | c | c | }
     \hline
-    \textbf{A} & \textbf{B} & \textbf{(A $\wedge$ B)} \\ \hline
+    \thead[cc]{A} & \thead[cc]{B} & \thead[cc]{(A $\wedge$ B)} \\ \hline
     w & w & w \\ \hline
     w & f & f \\ \hline
     f & w & f \\ \hline
@@ -108,7 +108,7 @@
   &
   \begin{tabular}{ | c | c | c | }
     \hline
-    \textbf{A} & \textbf{B} & \textbf{(A $\vee$ B)} \\ \hline
+    \thead[cc]{A} & \thead[cc]{B} & \thead[cc]{(A $\vee$ B)} \\ \hline
     w & w & w \\ \hline
     w & f & w \\ \hline
     f & w & w \\ \hline
@@ -117,14 +117,14 @@
   &
   \begin{tabular}{ | c | c | }
     \hline
-    \textbf{A} & \textbf{$\neg$A} \\ \hline
+    \thead[cc]{A} & \thead[cc]{$\neg$A} \\ \hline
     w & f \\ \hline
     f & w \\ \hline
   \end{tabular}
   \\
   \begin{tabular}{ | c | c | c | }
     \hline
-    \textbf{A} & \textbf{B} & \textbf{(A $\Rightarrow$ B)} \\ \hline
+    \thead[cc]{A} & \thead[cc]{B} & \thead[cc]{(A $\Rightarrow$ B)} \\ \hline
     w & w & w \\ \hline
     w & f & f \\ \hline
     f & w & w \\ \hline
@@ -133,7 +133,7 @@
   &
   \begin{tabular}{ | c | c | c | }
     \hline
-    \textbf{A} & \textbf{B} & \textbf{(A $\iff$ B)} \\ \hline
+    \thead[cc]{A} & \thead[cc]{B} & \thead[cc]{(A $\iff$ B)} \\ \hline
     w & w & w \\ \hline
     w & f & f \\ \hline
     f & w & f \\ \hline
@@ -144,142 +144,100 @@
 
 \vspace{-.3cm}
 
-\subsection*{Umformungsregeln}
-\begin{framed} [Kommutativgesetz] 
-  \begin{equation*}
-    \begin{aligned}
-      (p \wedge q) \equiv (q \wedge p) \\
-      (p \vee q) \equiv (q \vee p) 
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Assoziativgesetz] 
-  \begin{equation*}
-    \begin{aligned}
-      (p \wedge (q \wedge r)) \equiv ((p \wedge q) \wedge r) \\
-      (p \vee (q \vee r)) \equiv ((p \vee q) \vee r) 
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Distributivgesetz] 
-  \begin{equation*}
-    \begin{aligned}
-      (p \wedge (q \vee r)) \equiv ((p \wedge q) \vee (p \wedge r)) \\	(p \vee (q \wedge r)) \equiv ((p \vee q) \wedge (p \vee r)) 
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Idempotenzgesetz] 
-  \begin{equation*}
-    \begin{aligned}
-      (p \wedge p) \equiv p \\
-      (p \vee p) \equiv p 
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Doppelnegation] 
-  \begin{equation*}
-    \begin{aligned}
-      \neg(\neg p) \equiv p 
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [de Morgan Gesetz] 
-  \begin{equation*}
-    \begin{aligned}
-      \neg(p \wedge q) \equiv ((\neg p)\vee (\neg q)) \\ 
-      \neg(p \vee q) \equiv ((\neg p)\wedge (\neg q)) 
-    \end{aligned}
-  \end{equation*}	
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Tautologieregeln] 
-  \begin{center}
-    \vspace{-.3cm}
-    \begin{tabular} {c c}
-      \parbox{.5\textwidth}{\begin{equation*}
-        wobei: (q = Tautologie)
-      \end{equation*}}
-      &
-      \parbox{3cm}{\begin{equation*}
-        \begin{aligned}
-          (p \wedge q) \equiv p \\ 
-          (p \vee q) \equiv q
-        \end{aligned}
-      \end{equation*}}
-    \end{tabular}
-    \vspace{-.3cm}
-  \end{center}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Kontradiktionsregeln] 
-  \begin{center}
-    \vspace{-.3cm}
-    \begin{tabular} {c c}
-      \parbox{.5\textwidth}{\begin{equation*}
-        wbei: (q = Kontradiktion) 
-      \end{equation*}}
-      &
-      \parbox{3cm}{\begin{equation*}
-        \begin{aligned}
-          (p \wedge q) \equiv q \\ 
-          (p \vee q) \equiv p 
-        \end{aligned}
-      \end{equation*}}
-    \end{tabular}
-    \vspace{-.3cm}
-  \end{center}
-\end{framed}
-\vspace{-.7cm}
-
-\subsection*{Umformungsregeln für Quantoren:}
-\begin{framed} [Negationsregeln]
-  \begin{equation*}
-    \begin{aligned}
-      \neg \forall x : p(x) \equiv \exists x : (\neg p(x)) \\
-      \neg \exists x : p(x) \equiv \forall x : (\neg p(x))	
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Ausklammerregeln]
-  \begin{equation*}
-    \begin{aligned}
-      (\forall x : p(x) \wedge \forall y : q(y)) \equiv \forall z : (p(z) \wedge q(z)) \\
-      (\exists x : p(x) \vee \exists y : q(y)) \equiv \exists z : (p(z) \vee q(z))
-    \end{aligned}
-  \end{equation*}
-\end{framed}
-
-\vspace{-.7cm}
-
-\begin{framed} [Vertauschungsregeln]
-  \begin{equation*}
-    \begin{aligned}
-      \forall x \forall y : p(x,y) \equiv \forall y \forall x : p(x,y)\\
-      \exists x \exists y : p(x,y) \equiv \exists y \exists x : p(x,y)
-    \end{aligned}
-  \end{equation*}
+\begin{framed} [Umformungsregeln]
+  \begin{tabular} {l | c}
+    \thead{Kommutativgesetz:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (p \wedge q) &\equiv (q \wedge p) \\
+        (p \vee q) &\equiv (q \vee p) 
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Assoziativgesetz:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (p \wedge (q \wedge r)) &\equiv ((p \wedge q) \wedge r) \\
+        (p \vee (q \vee r)) &\equiv ((p \vee q) \vee r) 
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Distributivgesetz:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (p \wedge (q \vee r)) &\equiv ((p \wedge q) \vee (p \wedge r)) \\
+        (p \vee (q \wedge r)) &\equiv ((p \vee q) \wedge (p \vee r)) 
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Idempotenzgesetz:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (p \wedge p) &\equiv p \\
+        (p \vee p) &\equiv p 
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Doppelnegation:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        \neg(\neg p) \equiv p
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{de Morgan Gesetz:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        \neg(p \wedge q) &\equiv ((\neg p)\vee (\neg q)) \\ 
+        \neg(p \vee q) &\equiv ((\neg p)\wedge (\neg q))
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Tautologieregeln:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (p \wedge q) &\equiv p \\ 
+        (p \vee q) &\equiv q \\
+        \text{wobei: }(q &= \text{Tautologie})
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Kontradiktionsregeln:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (p \wedge q) &\equiv q \\ 
+        (p \vee q) &\equiv p \\
+        \text{wobei: }(q &= \text{Kontradiktion})
+      \end{aligned}
+    \end{equation*}}
+  \end{tabular}
 \end{framed}
 
 
+\begin{framed} [Umformungsregeln für Quantoren]
+  \begin{tabular} {l | c}
+    \thead{Negations-\\regeln:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        \neg \forall x : p(x) &\equiv \exists x : (\neg p(x)) \\
+        \neg \exists x : p(x) &\equiv \forall x : (\neg p(x))	
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Ausklammer-\\regeln:} & 
+    \parbox{.63\textwidth}{\begin{equation*}
+      \begin{aligned}
+        (\forall x : p(x) \wedge \forall y : q(y)) &\equiv \forall z : (p(z) \wedge q(z)) \\
+        (\exists x : p(x) \vee \exists y : q(y)) &\equiv \exists z : (p(z) \vee q(z))
+      \end{aligned}
+    \end{equation*}}
+    \\\hline
+    \thead{Vertauschungs-\\regeln:} & 
+    \parbox{.5\textwidth}{\begin{equation*}
+      \begin{aligned}
+        \forall x \forall y : p(x,y) &\equiv \forall y \forall x : p(x,y)\\
+        \exists x \exists y : p(x,y) &\equiv \exists y \exists x : p(x,y)
+      \end{aligned}
+    \end{equation*}}
+  \end{tabular}
+\end{framed}

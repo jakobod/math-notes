@@ -1,102 +1,175 @@
 %\small %oder \tiny oder \scriptsize oder \footnotesize oder \small ...
-\section*{Definitionen}
-\textbf{1. Abbildung:} Unter einer Abbildung $f$ von einer Menge A in einer Menge B versteht man eine Vorschrift, die jedem $a \in A$ eindeutig ein bestimmtes $b = f(a) \in B$ zuordnet.
-\begin{itemize}
-  \setlength\itemsep{-0.05cm}
-  \item Schreibweise: $f : A \rightarrow B$.
-  \item F�r die Elementzuordnung verwendet man die Schreibweise $a \rightarrowtail b = f(a)$
-  \item Man bezeichnet $b$ als das Bild von $a$.
-  \item $a$ ist ein Urbild von $b$
-\end{itemize}
+\subsection*{Definitionen}
+\begin{description}
+  \item [Abbildung:] 
+    Unter einer Abbildung $f$ von einer Menge $A$ in einer Menge $B$ versteht 
+    man eine Vorschrift, die jedem $a \in A$ eindeutig ein bestimmtes 
+    $b = f(a) \in B$ zuordnet.
+    \begin{itemize}
+      \setlength\itemsep{-0.05cm}
+      \item Schreibweise: $f : A \rightarrow B$.
+      \item für die Elementzuordnung verwendet man die Schreibweise 
+            $a \rightarrowtail b = f(a)$
+      \item Man bezeichnet $b$ als das Bild von $a$.
+      \item $a$ ist ein Urbild von $b$
+    \end{itemize}
 
-\textbf{2. Abbildung:} Sei $F \subseteq A \times B$ eine linksvollst�ndige und rechtseindeutige Relation.\\
-1. $F$ ist linksvollst�ndig: F�r alle $a \in A$ gilt: Es existiert ein $b \in B$, so dass $(a,b) \in R$
-2. $F$ ist rechtseindeutig: F�r alle $a \in A$ und alle $b_1, b_2 \in B$ gilt: $(a,b_1) \in R$ und $(a,b_2) \in R$, dann $b_1 = b_2$.\\
-Das Tripel $f = (A,B,F)$ hei�t Abbildung von A nach B.
-\begin{itemize}
-  \item $F$ hei�t Graph der Abbildung
-  \item $A$ ist der Definitioinsbereich
-  \item $B$ ist der Bildbereich
-\end{itemize}
-Zu jedem $a \in A$ wird das eindeutig bestimmte $b \in B$ mit $aFb$ als Bild von $f$ bei $a$ bezeichnet. Notation: $f(a)$
+  \item [Abbildung:] 
+    Sei $F \subseteq A \times B$ eine linksvollständige und rechtseindeutige 
+    Relation.
+    \begin{enumerate}
+      \item $F$ ist linksvollständig: für alle $a \in A$ gilt: Es existiert ein 
+            $b \in B$, so dass $(a,b) \in R$
+      \item $F$ ist rechtseindeutig: für alle $a \in A$ und alle 
+            $b_1, b_2 \in B$ gilt: $(a,b_1) \in R$ und $(a,b_2) \in R$, dann 
+            $b_1 = b_2$
+    \end{enumerate}
+    Das Tripel $f = (A,B,F)$ heißt Abbildung von A nach B.
+    \begin{itemize}
+      \item $F$ heißt Graph der Abbildung
+      \item $A$ ist der Definitionsbereich
+      \item $B$ ist der Bildbereich
+    \end{itemize}
+    Zu jedem $a \in A$ wird das eindeutig bestimmte $b \in B$ mit $aFb$ als Bild
+    von $f$ bei $a$ bezeichnet. Notation: $f(a)$
 
-\textbf{3. Bild:} Sei $f : A \rightarrow B$ und $M \subseteq A$.
-\begin{itemize}
-  \item Das Bild von $M$ unter $f$ ist die Menge: $f(M) := \{f(x) | x \in M\}$
-  \item Insbesondere hei�t $Bild(f) := f(A)$ das (volle) Bild von $f$ (auch Wertebereich). 
-  \item Das Urbild einer Teilmenge $N \subseteq B$ ist definiert durch: $f^{-1}(N) := \{a\in A | f(a) \in N\}$
-\end{itemize}
+  \item [Bild:]
+    Sei $f : A \rightarrow B$ und $M \subseteq A$
+    \begin{itemize}
+      \item Das Bild von $M$ unter $f$ ist die Menge:
+            $f(M) := \{f(x) | x \in M\}$
+      \item Insbesondere heißt $Bild(f) := f(A)$ das (volle) Bild von $f$
+            (auch Wertebereich).
+      \item Das Urbild einer Teilmenge $N \subseteq B$ ist definiert durch: 
+            $f^{-1}(N) := \{a\in A | f(a) \in N\}$
+    \end{itemize}
 
-\textbf{4. Einschr�nkung:} Sei $f = (A,B,F)$ eine Abbildung und $M \subseteq A$.\\
-Die Abbildung $f|_m = (M,B,F \cap (M \times B))$ hei�t Einschr�nkung von $f$ auf $M$.
+  \item [Einschränkung:]
+    Sei $f = (A,B,F)$ eine Abbildung und $M \subseteq A$.\\
+    Die Abbildung $f|_m = (M,B,F \cap (M \times B))$ heißt Einschränkung von
+    $f$ auf $M$.
 
-\textbf{5. Komposition:} Kompositionen von Funktionen ist hier definiert als: $a \rightarrowtail (g \circ f)(a) = g(f(a)), a \in A$
+  \item [Komposition:]
+    Kompositionen von Funktionen ist hier definiert als: 
+    $a \rightarrowtail (g \circ f)(a) = g(f(a)), a \in A$
 
-\textbf{6. Injektiv:} Wenn f�r alle $a,a' \in A$ mit $a \neq a'$ gilt $f(a) \neq f(a')$.
+  \item [Injektiv:]
+    Wenn für alle $a,a' \in A$ mit $a \neq a'$ gilt $f(a) \neq f(a')$.
 
-\textbf{7. surjektiv:} Falls es f�r jedes $b \in B$ ein $a \in A$ gibt mit $f(a) = b$.
+  \item [surjektiv:]
+    Falls es für jedes $b \in B$ ein $a \in A$ gibt mit $f(a) = b$.
 
-\textbf{8. bijektiv:} Falls $f$ sowohl injektiv als auch surjektiv ist.
+  \item [bijektiv:]
+    Falls $f$ sowohl injektiv als auch surjektiv ist.
 
-\textbf{9. Inverse Abbildung:} Sei $f : A \rightarrow B$ eine bijektive Abbildung. Da existiert zu $f$ stets eine Abbildung $g$ mit $g \circ f = id_A$ und $f \circ g = id_B$.
-$g$ hei�t die zu $f$ inverse Abbildung oder Umkehrabbildung. Notation: $f^{-1}$.
+  \item [Inverse Abbildung:]
+    Sei $f : A \rightarrow B$ eine bijektive Abbildung. Da existiert zu $f$ 
+    stets eine Abbildung $g$ mit $g \circ f = id_A$ und $f \circ g = id_B$.
+    $g$ heißt die zu $f$ inverse Abbildung oder Umkehrabbildung. Notation: 
+    $f^{-1}$.
 
-\textbf{10. Gleichm�chtig:} Seien $M$ und $N$ zwei Mengen. $M$ und $N$ hei�en gleichm�chtig (oder umfangsgleich) genau dann, wenn es eine bijektive Abbildung $f : M \rightarrow N$ gibt. Notation $M \tilde{=} N$. ($|M| = |N|$)
+  \item [Gleichmächtig:]
+    Seien $M$ und $N$ zwei Mengen. $M$ und $N$ heißen gleichmächtig 
+    (oder umfangsgleich) genau dann, wenn es eine bijektive Abbildung 
+    $f : M \rightarrow N$ gibt. Notation $M \tilde{=} N$. ($|M| = |N|$)
 
-\textbf{11. endlich:} Eine Menge $M$ hei�t endlich genau dann, wenn $M = \emptyset$ oder es f�r ein $n \in \mathbb{N}$ eine bijektive Abbildung $b : M \rightarrow \mathbb{N}_n$ gibt.
+  \item [endlich:]
+    Eine Menge $M$ heißt endlich genau dann, wenn $M = \emptyset$ oder es für
+    ein $n \in \mathbb{N}$ eine bijektive Abbildung
+    $b : M \rightarrow \mathbb{N}_n$ gibt.
 
-\textbf{12. unendlich:} Eine Menge $M$ hei�t unendlich genau dann, wenn $M$ nicht endlich ist.
+  \item [unendlich:]
+    Eine Menge $M$ heißt unendlich genau dann, wenn $M$ nicht endlich ist.
 
-\textbf{13. abz�hlbar:} Eine Menge $M$ hei�t abz�hlbar genau dann, wenn $M$ endlich ist oder es eine bijektive Abbildung $b : M \rightarrow \mathbb{N}$ gibt.
+  \item [abzählbar:]
+    Eine Menge $M$ heißt abzählbar genau dann, wenn $M$ endlich ist oder es eine 
+    bijektive Abbildung $b : M \rightarrow \mathbb{N}$ gibt.
 
-\textbf{14. abz�hlbar unendlich:} Eine Menge $M$ hei�t abz�hlbar unendlich genau dann, wenn $M$ abz�hlbar und unendlich ist.
+  \item [abzählbar unendlich:]
+    Eine Menge $M$ heißt abzählbar unendlich genau dann, wenn $M$ abzählbar und
+    unendlich ist.
 
-\textbf{15. �berabz�hlbar:} Eine Menge hei�t �berabz�hlbar genau dann, wenn $M$ nicht abz�hlbar ist.
+  \item [überabzählbar:]
+    Eine Menge heißt überabzählbar genau dann, wenn $M$ nicht abzählbar ist.
 
-\textbf{16. Folge:} Eine Folge Reeller Zahlen ist eine Funktion $ f : \mathbb{N} \rightarrow \mathbb{R}$.
+  \item [Folge:]
+    Eine Folge Reeller Zahlen ist eine Funktion 
+    $f : \mathbb{N} \rightarrow \mathbb{R}$.
 
-\textbf{17. konvergenz:} Eine Folge ($a_n$) konvergiert gegen $a \in \mathbb{R}$, wenn gilt: Zu jedem $\epsilon > 0$ existiert ein $N \in \mathbb{R}$, so dass gilt:\\
-$|a_n - a| < \epsilon$ f�r alle $n > N$\\
-Die Zahl $a$ hei�t Grenzwert (Limes) der Folge ($a_n$). Eine Folge ($a_n$) mit Grenzwert hei�t konvergent.
-Man schreibt: $lim_{n\rightarrow \infty} a_n = a$ oder auch $a_n \rightarrow a$ f�r $n \rightarrow \infty$.
-Eine Folge, die gegen $a = 0$ konvergiert, hei�t Nullfolge.
+  \item [konvergenz:]
+    Eine Folge ($a_n$) konvergiert gegen $a \in \mathbb{R}$, wenn gilt: 
+    Zu jedem $\epsilon > 0$ existiert ein $N \in \mathbb{R}$, so dass gilt:\\
+    $|a_n - a| < \epsilon$ für alle $n > N$\\
+    Die Zahl $a$ heißt Grenzwert (Limes) der Folge ($a_n$). Eine Folge ($a_n$) 
+    mit Grenzwert heißt konvergent. Man schreibt: 
+    $lim_{n\rightarrow \infty} a_n = a$ oder auch $a_n \rightarrow a$ für 
+    $n \rightarrow \infty$.\\
+    Eine Folge, die gegen $a = 0$ konvergiert, heißt Nullfolge.
 
-\textbf{18. Reihe:} Sei ($a_n$) eine Folge. Die Reihe ($s_n$) ergibt sich aus ($a_n$) durch Summation: $s_n := \sum_{k=0}^{n} a_n$
+  \item [Reihe:]
+    Sei ($a_n$) eine Folge. Die Reihe ($s_n$) ergibt sich aus ($a_n$) durch 
+    Summation: $s_n := \sum_{k=0}^{n} a_n$
 
-\textbf{19. beschr�nkt(e Folge):} Eine Folge ($a_n$)hei�t beschr�nkt, wenn es eine Zahl $s$ gibt, so dass $|a_n| \leq s$ f�r alle $n$ gilt.
+  \item [beschränkt(e Folge):]
+    Eine Folge ($a_n$)heißt beschränkt, wenn es eine Zahl $s$ gibt, so dass 
+    $|a_n| \leq s$ für alle $n$ gilt.
 
-\textbf{20. monoton wachsend:} Eine Folge ($a_n$) hei�t monoton wachsend, wenn $a_n \leq a_{n+1}$ f�r alle $n$ gilt.
+  \item [monoton wachsend:]
+    Eine Folge ($a_n$) heißt monoton wachsend, wenn $a_n \leq a_{n+1}$ für alle 
+    $n$ gilt.
 
-\textbf{21. monoton fallend:} Eine Folge ($a_n$) hei�t monoton fallend, wenn $a_n \geq a_{n+1}$ f�r alle $n$ gilt.
+  \item [monoton fallend:]
+    Eine Folge ($a_n$) heißt monoton fallend, wenn $a_n \geq a_{n+1}$ für alle 
+    $n$ gilt.
 
-\textbf{22. supremum:} Eine Zahl $s$ hei�t Suprmum einer Menge $M \subseteq \mathbb{R}$, wenn $s$ die kleinste obere Schranke von $M$ ist, d.h:
-\begin{itemize}
-  \item $s$ ist obere Schranke von $M$ ($\forall m \in M : m \leq s$)
-  \item jede Zahl $x < s$ ist keine obere Schranke von $M$
-\end{itemize}
+  \item [supremum:]
+    Eine Zahl $s$ heißt Suprmum einer Menge $M \subseteq \mathbb{R}$, wenn $s$ 
+    die kleinste obere Schranke von $M$ ist, d.h:
+    \begin{itemize}
+      \item $s$ ist obere Schranke von $M$ ($\forall m \in M : m \leq s$)
+      \item jede Zahl $x < s$ ist keine obere Schranke von $M$
+    \end{itemize}
 
-\textbf{23. infimum:} Eine Zahl $i$ hei�t Infimum einer Menge $M \subseteq \mathbb{R}$, wenn $i$ die gr��te untere Schranke von $M$ ist.
+  \item [infimum:]
+    Eine Zahl $i$ heißt Infimum einer Menge $M \subseteq \mathbb{R}$, wenn $i$
+    die größte untere Schranke von $M$ ist.
 
-\textbf{24. H�ufungspunkt:} $h$ hei�t H�ufungspunkt einer Folge ($a_n$), wenn jede Umgebung $K_\epsilon (h)$ von $h$ undendlich viele Folgeglieder enth�lt. Also:\\
-$|h - a_n| < \epsilon$ f�r unendlich viele $n$
+  \item [Häufungspunkt:]
+    $h$ heißt Häufungspunkt einer Folge ($a_n$), wenn jede Umgebung 
+    $K_\epsilon (h)$ von $h$ undendlich viele Folgeglieder enthält. Also:\\
+    $|h - a_n| < \epsilon$ für unendlich viele $n$
 
-\textbf{25. Cauchy-Folge:} Eine Folge ($a_n$) hei�t Cauchy-Folge, wenn es zu jedem $\epsilon > 0$ ein $n$ gibt so dass gilt: $|a_n -a_m| < \epsilon$, falls $n$ und $m$ > $N$ sind.
+  \item [Cauchy-Folge:]
+    Eine Folge ($a_n$) heißt Cauchy-Folge, wenn es zu jedem $\epsilon > 0$ ein
+    $n$ gibt so dass gilt: $|a_n -a_m| < \epsilon$, falls $n$ und $m$ > $N$ sind.
 
-\textbf{26. Asymptotisch:} Zwei Folgen ($a_n$) und ($b_n$) mit $b_n \neq 0$ hei�en asymptotisch gleich, falls die Folge ($\frac{a_n}{b_n}$) gegen 1 konvergiert. Notation: $a_n \tilde{-} b_n$.
+  \item [Asymptotisch:]
+    Zwei Folgen ($a_n$) und ($b_n$) mit $b_n \neq 0$ heißen asymptotisch gleich,
+    falls die Folge ($\frac{a_n}{b_n}$) gegen 1 konvergiert. Notation: 
+    $a_n \tilde{-} b_n$.
 
-\textbf{27. O-Notation:} Sei $g : \mathbb{N} \rightarrow \mathbb{R}$. Eine Funktion $f : \mathbb{N} \rightarrow \mathbb{R}$ geh�rt zu der Menge $O(g)$, wenn es eine Konstante $c \in \mathbb{R}^+ gibt, so dass |f(n)| \leq c \circ |g(n)|$f�r fast alle $n$ gilt.
-\section*{Rechenregeln Folgen}
-\begin{itemize}
-  \item $lim_{n\rightarrow \infty} \frac{1}{n^s} = 0$ f�r jedes positive $s \in \mathbb{Q}$.
-  \item $lim_{n\rightarrow \infty} \sqrt[n]{a} = 1$ f�r jedes reelle $a > 0$.
-  \item $lim_{n\rightarrow \infty} \sqrt[n]{n} = 1$.
-  \item $lim_{n\rightarrow \infty} q^n = 0$ f�r jedes reelle $q$ mit $|q| < 1$.
-\end{itemize}
+  \item [O-Notation:]
+    Sei $g : \mathbb{N} \rightarrow \mathbb{R}$. Eine Funktion 
+    $f : \mathbb{N} \rightarrow \mathbb{R}$ gehört zu der Menge $O(g)$, wenn es
+    eine Konstante $c \in \mathbb{R}^+ gibt, so dass |f(n)| \leq c \circ |g(n)|$
+    für fast alle $n$ gilt.
+\end{description}
+
+
+\begin{framed} [Rechenregeln Folgen]
+  \begin{itemize}
+    \item $lim_{n\rightarrow \infty} \frac{1}{n^s} = 0$ für jedes positive $s \in \mathbb{Q}$.
+    \item $lim_{n\rightarrow \infty} \sqrt[n]{a} = 1$ für jedes reelle $a > 0$.
+    \item $lim_{n\rightarrow \infty} \sqrt[n]{n} = 1$.
+    \item $lim_{n\rightarrow \infty} q^n = 0$ für jedes reelle $q$ mit $|q| < 1$.
+  \end{itemize}
+\end{framed}
+
 
 %	\section*{Zusammenfassung}
-%	Funktionen sind Relationen, die ein Urbild ($A$) mit einem Bild ($B$) verkn�pfen. Funktionen sind dabei linksvollst�ndig und rechtseindeutig. 
+%	Funktionen sind Relationen, die ein Urbild ($A$) mit einem Bild ($B$) verknüpfen. Funktionen sind dabei linksvollständig und rechtseindeutig. 
 %	
-%	Die Inverse Abbildung ist der Schritt vom Bild zur�ck zum Urbild. Dies l�sst sich (wie bei der negation $\neg$) beliebig oft durchf�hren--Ergebnis ist immer Bild oder Urbild. 
+%	Die Inverse Abbildung ist der Schritt vom Bild zurück zum Urbild. Dies lässt sich (wie bei der negation $\neg$) beliebig oft durchführen--Ergebnis ist immer Bild oder Urbild. 
 %	
-%	Eine Folge definiert sich durch die Folgenvorschrift. mana z�hlt ganzzahlige Schritte hoch und errechnet dann anhand der Vorschrift die jeweiligen Folgenglieder. 
-%	Die Reihe ist eine weiterf�hrung der Folge. Diese Summiert die jeweiligen Folgenglieder bis stelle $n$ auf um die Reihenglieder zu bestimmen. 
+%	Eine Folge definiert sich durch die Folgenvorschrift. mana zählt ganzzahlige Schritte hoch und errechnet dann anhand der Vorschrift die jeweiligen Folgenglieder. 
+%	Die Reihe ist eine weiterführung der Folge. Diese Summiert die jeweiligen Folgenglieder bis stelle $n$ auf um die Reihenglieder zu bestimmen. 
